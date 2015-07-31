@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFClientAPP", "RFClientAPP\RFClientAPP.csproj", "{9F77437D-426D-41FD-A693-23052831400E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFDeviceAPP", "RFDeviceAPP\RFDeviceAPP.csproj", "{808E2168-A79D-4749-953A-345F01C3D303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTest", "ClientTest\ClientTest.csproj", "{B320A41E-F24A-4A79-8FA5-5E5361E72DE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateWebService", "UpdateWebService\UpdateWebService.csproj", "{BCA37317-6E15-41A4-A513-86163FF9CD96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateClient", "UpdateClient\UpdateClient.csproj", "{1E61817D-B384-4CA3-A011-A8ECCD90B2BF}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ClientTest\\ClientTest.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = ClientTest\\
+		SccProjectUniqueName2 = RFClientAPP\\RFClientAPP.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = RFClientAPP\\
+		SccProjectUniqueName3 = RFDeviceAPP\\RFDeviceAPP.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = RFDeviceAPP\\
+		SccProjectUniqueName4 = UpdateClient\\UpdateClient.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = UpdateClient\\
+		SccProjectUniqueName5 = UpdateWebService\\UpdateWebService.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = UpdateWebService\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F77437D-426D-41FD-A693-23052831400E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F77437D-426D-41FD-A693-23052831400E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F77437D-426D-41FD-A693-23052831400E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F77437D-426D-41FD-A693-23052831400E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808E2168-A79D-4749-953A-345F01C3D303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808E2168-A79D-4749-953A-345F01C3D303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808E2168-A79D-4749-953A-345F01C3D303}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{808E2168-A79D-4749-953A-345F01C3D303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808E2168-A79D-4749-953A-345F01C3D303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808E2168-A79D-4749-953A-345F01C3D303}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B320A41E-F24A-4A79-8FA5-5E5361E72DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B320A41E-F24A-4A79-8FA5-5E5361E72DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B320A41E-F24A-4A79-8FA5-5E5361E72DE5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B320A41E-F24A-4A79-8FA5-5E5361E72DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B320A41E-F24A-4A79-8FA5-5E5361E72DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B320A41E-F24A-4A79-8FA5-5E5361E72DE5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BCA37317-6E15-41A4-A513-86163FF9CD96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA37317-6E15-41A4-A513-86163FF9CD96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA37317-6E15-41A4-A513-86163FF9CD96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA37317-6E15-41A4-A513-86163FF9CD96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E61817D-B384-4CA3-A011-A8ECCD90B2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E61817D-B384-4CA3-A011-A8ECCD90B2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E61817D-B384-4CA3-A011-A8ECCD90B2BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1E61817D-B384-4CA3-A011-A8ECCD90B2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E61817D-B384-4CA3-A011-A8ECCD90B2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E61817D-B384-4CA3-A011-A8ECCD90B2BF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

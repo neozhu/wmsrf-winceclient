@@ -1,0 +1,6 @@
+D:\VSS\SourceCode\RF Client\RFClientAPP\bin\Debug\RFClientAPP.exe.config
+D:\VSS\SourceCode\RF Client\RFClientAPP\bin\Debug\RFClientAPP.exe
+D:\VSS\SourceCode\RF Client\RFClientAPP\bin\Debug\RFClientAPP.pdb
+D:\VSS\SourceCode\RF Client\RFClientAPP\obj\Debug\ResolveAssemblyReference.cache
+D:\VSS\SourceCode\RF Client\RFClientAPP\obj\Debug\RFClientAPP.exe
+D:\VSS\SourceCode\RF Client\RFClientAPP\obj\Debug\RFClientAPP.pdb

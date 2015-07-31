@@ -1,0 +1,8 @@
+D:\VSS\SourceCode\RF Client\UpdateClient\bin\Debug\UpdateClient.exe
+D:\VSS\SourceCode\RF Client\UpdateClient\bin\Debug\UpdateClient.pdb
+D:\VSS\SourceCode\RF Client\UpdateClient\obj\Debug\ResolveAssemblyReference.cache
+D:\VSS\SourceCode\RF Client\UpdateClient\obj\Debug\UpdateClient.Form1.resources
+D:\VSS\SourceCode\RF Client\UpdateClient\obj\Debug\UpdateClient.Properties.Resources.resources
+D:\VSS\SourceCode\RF Client\UpdateClient\obj\Debug\UpdateClient.csproj.GenerateResource.Cache
+D:\VSS\SourceCode\RF Client\UpdateClient\obj\Debug\UpdateClient.exe
+D:\VSS\SourceCode\RF Client\UpdateClient\obj\Debug\UpdateClient.pdb

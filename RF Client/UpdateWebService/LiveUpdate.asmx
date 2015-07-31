@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="LiveUpdate.asmx.cs" Class="UpdateWebService.LiveUpdate" %>

@@ -1,0 +1,701 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{808E2168-A79D-4749-953A-345F01C3D303}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFDeviceAPP</RootNamespace>
+    <AssemblyName>RFDeviceAPP</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>RFDeviceAPP</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>5awl.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrivalFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArrivalFrm.Designer.cs">
+      <DependentUpon>ArrivalFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseForm.Designer.cs">
+      <DependentUpon>baseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassifyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassifyFrm.Designer.cs">
+      <DependentUpon>ClassifyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\rfFieldComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\rfFieldComboBox.Designer.cs">
+      <DependentUpon>rfFieldComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\rfButtonCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\rfComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\rfFieldTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\rfFieldTextBox.Designer.cs">
+      <DependentUpon>rfFieldTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\rfLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\rfPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\rfTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DoClassifyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoClassifyFrm.Designer.cs">
+      <DependentUpon>DoClassifyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Global.cs" />
+    <Compile Include="Entities\move\NSPRFRL01B1FL_Request.designer.cs" />
+    <Compile Include="Entities\move\NSPRFRL01B1FL_Response.designer.cs" />
+    <Compile Include="Entities\Orders\ShipmentOrder.cs" />
+    <Compile Include="Entities\RFPutWay\NSPRFRL021LOC_Request.designer.cs" />
+    <Compile Include="Entities\RFPutWay\NSPRFRL021LOC_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\Task_List_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\Task_List_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\RFCalcSuitLabelData_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\RFCalcSuitLabelData_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\Task_Cancel_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\Task_Cancel_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\Task_Reason_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\Task_Reason_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\Task_Store_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFQUERYBYDROPID_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFQUERYBYDROPID_Response.designer.cs" />
+    <Compile Include="Entities\stock\Stock_Query_Request.designer.cs" />
+    <Compile Include="Entities\stock\Stock_Query_Response.designer.cs" />
+    <Compile Include="Entities\WhCode.cs" />
+    <Compile Include="FrmPODCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPODCheck.Designer.cs">
+      <DependentUpon>FrmPODCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPODLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPODLabel.Designer.cs">
+      <DependentUpon>FrmPODLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPODLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPODLoad.Designer.cs">
+      <DependentUpon>FrmPODLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPODPick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPODPick.Designer.cs">
+      <DependentUpon>FrmPODPick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPODQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPODQC.Designer.cs">
+      <DependentUpon>frmPODQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmreason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmreason.Designer.cs">
+      <DependentUpon>Frmreason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStockQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStockQuery.Designer.cs">
+      <DependentUpon>FrmStockQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStockResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStockResult.Designer.cs">
+      <DependentUpon>FrmStockResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStockResultDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStockResultDetail.Designer.cs">
+      <DependentUpon>FrmStockResultDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputOpenBoxNumFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputOpenBoxNumFrm.Designer.cs">
+      <DependentUpon>InputOpenBoxNumFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NSPRFQUERYBYDROPIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NSPRFQUERYBYDROPIDForm.Designer.cs">
+      <DependentUpon>NSPRFQUERYBYDROPIDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NSPRFRL01B1FLFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NSPRFRL01B1FLFrm.Designer.cs">
+      <DependentUpon>NSPRFRL01B1FLFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NSPRFSH01Frm_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NSPRFSH01Frm_2.Designer.cs">
+      <DependentUpon>NSPRFSH01Frm_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFRL021_2Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFRL021_2Frm.Designer.cs">
+      <DependentUpon>RFRL021_2Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ASN\Arrival01.Request.designer.cs" />
+    <Compile Include="Entities\ASN\Arrival01.Response.designer.cs" />
+    <Compile Include="Entities\ASN\asnlist01.Request.designer.cs" />
+    <Compile Include="Entities\ASN\asnlist01.Response.designer.cs" />
+    <Compile Include="Entities\ASN\NSPRFSH01.Request.designer.cs" />
+    <Compile Include="Entities\ASN\DM01.Request.designer.cs" />
+    <Compile Include="Entities\ASN\DM01.Response.designer.cs" />
+    <Compile Include="Entities\ASN\DM02.Request.designer.cs" />
+    <Compile Include="Entities\Login\NSPRFOT08_Request.designer.cs" />
+    <Compile Include="Entities\Login\NSPRFOT08_Response.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP1A01_Request.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP1A01_Response.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP1B01_Request.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP1B01_Response.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP301_Request.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP301_Response.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP401S_Request.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP401S_Response.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP401_Request.designer.cs" />
+    <Compile Include="Entities\RFPacking\NSPRFP401_Response.designer.cs" />
+    <Compile Include="Entities\RFPicking\NSPRFFLOP01_Request.designer.cs" />
+    <Compile Include="Entities\RFPicking\NSPRFFLOP01_Response.designer.cs" />
+    <Compile Include="Entities\RFPicking\NSPRFFLREMQTY_Request.designer.cs" />
+    <Compile Include="Entities\RFPicking\NSPRFFLREMQTY_Response.designer.cs" />
+    <Compile Include="Entities\RFPicking\NSPRFOP01_Request.designer.cs" />
+    <Compile Include="Entities\RFPicking\NSPRFOP01_Response.designer.cs" />
+    <Compile Include="Entities\RFPutWay\NSPRFPA01_Request.designer.cs" />
+    <Compile Include="Entities\RFPutWay\NSPRFPA01_Response.designer.cs" />
+    <Compile Include="Entities\RFPutWay\NSPRFPA02_Request.designer.cs" />
+    <Compile Include="Entities\RFPutWay\NSPRFPA02_Response.designer.cs" />
+    <Compile Include="Entities\RFRecipt\FLGetASNByLine_Request.designer.cs" />
+    <Compile Include="Entities\RFRecipt\FLGetASNByLine_Response.designer.cs" />
+    <Compile Include="Entities\RFRecipt\FLGETSKUINFOP1S1_Request.designer.cs" />
+    <Compile Include="Entities\RFRecipt\FLGETSKUINFOP1S1_Response.designer.cs" />
+    <Compile Include="Entities\RFRecipt\FLRFRECEIVEByLine_Request.designer.cs" />
+    <Compile Include="Entities\RFRecipt\FLRFRECEIVEByLine_Response.designer.cs" />
+    <Compile Include="Entities\RFRecipt\NSPRFRC01E_Request.designer.cs" />
+    <Compile Include="Entities\RFRecipt\NSPRFRC01E_Response.designer.cs" />
+    <Compile Include="Entities\RFRecipt\NSPRFRCC01E_Request.designer.cs" />
+    <Compile Include="Entities\RFRecipt\NSPRFRCC01E_Response.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL021SO_Request.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL021SO_Response.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL02BATCH_Request.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL02BATCH_Response.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL021_Request.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL021_Response.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL02A_Request.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL02_Request.designer.cs" />
+    <Compile Include="Entities\RFShipping\NSPRFRL02_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTM01_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTM01_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPA00_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPA00_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPA01_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPA01_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPA02_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPA02_Response.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPK01C_Request.designer.cs" />
+    <Compile Include="Entities\RFTaskTPK\NSPRFTPK01C_Response.designer.cs" />
+    <Compile Include="Entities\UserInfo.cs" />
+    <Compile Include="DischargeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DischargeFrm.Designer.cs">
+      <DependentUpon>DischargeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ASN\AdvancedShipNotice.cs" />
+    <Compile Include="Entities\Task.cs" />
+    <Compile Include="HomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeFrm.Designer.cs">
+      <DependentUpon>HomeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inputdridfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inputdridfrm.Designer.cs">
+      <DependentUpon>Inputdridfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveFrm.Designer.cs">
+      <DependentUpon>LeaveFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NSPRFRL021SOFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NSPRFRL021SOFrm.Designer.cs">
+      <DependentUpon>NSPRFRL021SOFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NSPRFRL02BATCHFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NSPRFRL02BATCHFrm.Designer.cs">
+      <DependentUpon>NSPRFRL02BATCHFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NSPRFSH01Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NSPRFSH01Frm.Designer.cs">
+      <DependentUpon>NSPRFSH01Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PQCFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PQCFrm.Designer.cs">
+      <DependentUpon>PQCFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ArrivalFrm.resx">
+      <DependentUpon>ArrivalFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseForm.resx">
+      <DependentUpon>baseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassifyFrm.resx">
+      <DependentUpon>ClassifyFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\rfFieldComboBox.resx">
+      <DependentUpon>rfFieldComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\rfFieldTextBox.resx">
+      <DependentUpon>rfFieldTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoClassifyFrm.resx">
+      <DependentUpon>DoClassifyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPODCheck.resx">
+      <DependentUpon>FrmPODCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPODLabel.resx">
+      <DependentUpon>FrmPODLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPODLoad.resx">
+      <DependentUpon>FrmPODLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPODPick.resx">
+      <DependentUpon>FrmPODPick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPODQC.resx">
+      <DependentUpon>frmPODQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmreason.resx">
+      <DependentUpon>Frmreason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStockQuery.resx">
+      <DependentUpon>FrmStockQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStockResult.resx">
+      <DependentUpon>FrmStockResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStockResultDetail.resx">
+      <DependentUpon>FrmStockResultDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputOpenBoxNumFrm.resx">
+      <DependentUpon>InputOpenBoxNumFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSPRFQUERYBYDROPIDForm.resx">
+      <DependentUpon>NSPRFQUERYBYDROPIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSPRFRL01B1FLFrm.resx">
+      <DependentUpon>NSPRFRL01B1FLFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSPRFSH01Frm_2.resx">
+      <DependentUpon>NSPRFSH01Frm_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFRL021_2Frm.resx">
+      <DependentUpon>RFRL021_2Frm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DischargeFrm.resx">
+      <DependentUpon>DischargeFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeFrm.resx">
+      <DependentUpon>HomeFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inputdridfrm.resx">
+      <DependentUpon>Inputdridfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveFrm.resx">
+      <DependentUpon>LeaveFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSPRFRL021SOFrm.resx">
+      <DependentUpon>NSPRFRL021SOFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSPRFRL02BATCHFrm.resx">
+      <DependentUpon>NSPRFRL02BATCHFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NSPRFSH01Frm.resx">
+      <DependentUpon>NSPRFSH01Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PQCFrm.resx">
+      <DependentUpon>PQCFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptFrm.resx">
+      <DependentUpon>ReceiptFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFBeginDischargefrm.resx">
+      <DependentUpon>RFBeginDischargefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFFLPickingFrm.resx">
+      <DependentUpon>RFFLPickingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFLottableReciptFrm.resx">
+      <DependentUpon>RFLottableReciptFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFPackingFrm.resx">
+      <DependentUpon>RFPackingFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFPaperPickingFrm.resx">
+      <DependentUpon>RFPaperPickingFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFPqcFrm.resx">
+      <DependentUpon>RFPqcFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFPutWayFrm.resx">
+      <DependentUpon>RFPutWayFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFRL021Frm.resx">
+      <DependentUpon>RFRL021Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFTPA00Frm.resx">
+      <DependentUpon>RFTPA00Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFTPA02Frm.resx">
+      <DependentUpon>RFTPA02Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFTPK01CFrm.resx">
+      <DependentUpon>RFTPK01CFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskFrm.resx">
+      <DependentUpon>TaskFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskListFrm.resx">
+      <DependentUpon>TaskListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskTPKFrm.resx">
+      <DependentUpon>TaskTPKFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm1.resx">
+      <DependentUpon>TestForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm11.resx">
+      <DependentUpon>TestForm11.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserStatusControl.resx">
+      <DependentUpon>UserStatusControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Proxy\InvokeHelper.cs" />
+    <Compile Include="Proxy\ThreadHelper.cs" />
+    <Compile Include="ReceiptFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptFrm.Designer.cs">
+      <DependentUpon>ReceiptFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFBeginDischargefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFBeginDischargefrm.Designer.cs">
+      <DependentUpon>RFBeginDischargefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFFLPickingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFFLPickingFrm.Designer.cs">
+      <DependentUpon>RFFLPickingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFLottableReciptFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFLottableReciptFrm.Designer.cs">
+      <DependentUpon>RFLottableReciptFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFPackingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFPackingFrm.Designer.cs">
+      <DependentUpon>RFPackingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFPaperPickingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFPaperPickingFrm.Designer.cs">
+      <DependentUpon>RFPaperPickingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFPqcFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFPqcFrm.Designer.cs">
+      <DependentUpon>RFPqcFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFPutWayFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFPutWayFrm.Designer.cs">
+      <DependentUpon>RFPutWayFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFRL021Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFRL021Frm.Designer.cs">
+      <DependentUpon>RFRL021Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFTPA00Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFTPA00Frm.Designer.cs">
+      <DependentUpon>RFTPA00Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFTPA02Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFTPA02Frm.Designer.cs">
+      <DependentUpon>RFTPA02Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFTPK01CFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFTPK01CFrm.Designer.cs">
+      <DependentUpon>RFTPK01CFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskFrm.Designer.cs">
+      <DependentUpon>TaskFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskListFrm.Designer.cs">
+      <DependentUpon>TaskListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskTPKFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskTPKFrm.Designer.cs">
+      <DependentUpon>TaskTPKFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm1.Designer.cs">
+      <DependentUpon>TestForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm11.Designer.cs">
+      <DependentUpon>TestForm11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStatusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserStatusControl.Designer.cs">
+      <DependentUpon>UserStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\InfoWms.Api\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\updateservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.20.57.63/UpdateWebService/LiveUpdate.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\updateservice\</RelPath>
+      <UpdateFromURL>http://172.20.57.63/UpdateWebService/LiveUpdate.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.20.60.96/WMSWebService/services/WmsWebService%3fwsdl">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\InfoWms.Api\</RelPath>
+      <UpdateFromURL>http://172.20.60.96/WMSWebService/services/WmsWebService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\InfoWms.Api\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\InfoWms.Api\WmsWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\updateservice\LiveUpdate.disco" />
+    <None Include="Web References\updateservice\LiveUpdate.wsdl" />
+    <None Include="Web References\updateservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="5awl.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
