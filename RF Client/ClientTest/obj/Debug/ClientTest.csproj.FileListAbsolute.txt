@@ -3,3 +3,8 @@ D:\VSS\SourceCode\RF Client\ClientTest\bin\Debug\ClientTest.pdb
 D:\VSS\SourceCode\RF Client\ClientTest\obj\Debug\ResolveAssemblyReference.cache
 D:\VSS\SourceCode\RF Client\ClientTest\obj\Debug\ClientTest.exe
 D:\VSS\SourceCode\RF Client\ClientTest\obj\Debug\ClientTest.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\ClientTest\bin\Debug\ClientTest.exe
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\ClientTest\bin\Debug\ClientTest.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\ClientTest\obj\Debug\ResolveAssemblyReference.cache
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\ClientTest\obj\Debug\ClientTest.exe
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\ClientTest\obj\Debug\ClientTest.pdb

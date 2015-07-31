@@ -3,3 +3,8 @@ D:\VSS\SourceCode\RF Client\UpdateWebService\bin\UpdateWebService.pdb
 D:\VSS\SourceCode\RF Client\UpdateWebService\obj\Debug\ResolveAssemblyReference.cache
 D:\VSS\SourceCode\RF Client\UpdateWebService\obj\Debug\UpdateWebService.dll
 D:\VSS\SourceCode\RF Client\UpdateWebService\obj\Debug\UpdateWebService.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\bin\UpdateWebService.dll
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\bin\UpdateWebService.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\obj\Debug\UpdateWebService.dll
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\obj\Debug\UpdateWebService.pdb

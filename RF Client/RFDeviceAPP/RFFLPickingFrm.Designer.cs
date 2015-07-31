@@ -68,6 +68,7 @@
             this.sotxt.Name = "sotxt";
             this.sotxt.Size = new System.Drawing.Size(231, 23);
             this.sotxt.TabIndex = 0;
+            this.sotxt.LostFocus += new System.EventHandler(this.sotxt_LostFocus);
             // 
             // fromidtxt
             // 
@@ -77,6 +78,7 @@
             this.fromidtxt.Name = "fromidtxt";
             this.fromidtxt.Size = new System.Drawing.Size(231, 23);
             this.fromidtxt.TabIndex = 2;
+            this.fromidtxt.LostFocus += new System.EventHandler(this.fromidtxt_LostFocus);
             // 
             // rfLabel2
             // 
@@ -112,6 +114,7 @@
             this.qtytxt.Name = "qtytxt";
             this.qtytxt.Size = new System.Drawing.Size(231, 23);
             this.qtytxt.TabIndex = 4;
+            this.qtytxt.LostFocus += new System.EventHandler(this.qtytxt_LostFocus);
             // 
             // rfLabel4
             // 

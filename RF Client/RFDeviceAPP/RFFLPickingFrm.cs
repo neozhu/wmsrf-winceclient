@@ -320,6 +320,39 @@ namespace RFDeviceAPP
                 MessageBox.Show("区域拣货中必须输入ID");
                 dropidtxt.SetFocus();
             }
+            else if (this.isrequiredid && dropidtxt.Text.Length!=10)
+            {
+                MessageBox.Show("落放ID必须是10位");
+                dropidtxt.SetFocus();
+            }
+        }
+
+        private void sotxt_LostFocus(object sender, EventArgs e)
+        {
+            if (this.isrequiredid && string.IsNullOrEmpty(sotxt.Text.Trim()))
+            {
+                MessageBox.Show("订单号必须输入");
+                sotxt.SetFocus();
+            }
+            
+        }
+
+        private void fromidtxt_LostFocus(object sender, EventArgs e)
+        {
+            if (this.isrequiredid && string.IsNullOrEmpty(fromidtxt.Text.Trim()))
+            {
+                MessageBox.Show("LPN必须输入");
+                fromidtxt.SetFocus();
+            }
+        }
+
+        private void qtytxt_LostFocus(object sender, EventArgs e)
+        {
+            if (this.isrequiredid && string.IsNullOrEmpty(qtytxt.Text.Trim()))
+            {
+                MessageBox.Show("数量必须输入");
+                qtytxt.SetFocus();
+            }
         }
     }
 }
