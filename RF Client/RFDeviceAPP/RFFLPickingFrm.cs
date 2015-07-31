@@ -281,6 +281,21 @@ namespace RFDeviceAPP
                 errortxt += "sku必填";
 
             }
+            if (this.isrequiredid && string.IsNullOrEmpty(dropidtxt.Text.Trim()))
+            {
+                if (string.IsNullOrEmpty(errortxt))
+                    focusControl = this.dropidtxt;
+                errortxt += "区域拣货中必须输入ID";
+                 
+            }
+            else if (this.isrequiredid && dropidtxt.Text.Length != 10)
+            {
+                if (string.IsNullOrEmpty(errortxt))
+                    focusControl = this.dropidtxt;
+                errortxt += "区域拣货中必须输入ID";
+                 
+            }
+
             return errortxt;
         }
         private void skutxt_LostFocus(object sender, EventArgs e)

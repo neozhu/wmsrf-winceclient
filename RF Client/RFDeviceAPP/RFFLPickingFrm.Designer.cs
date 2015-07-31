@@ -68,7 +68,6 @@
             this.sotxt.Name = "sotxt";
             this.sotxt.Size = new System.Drawing.Size(231, 23);
             this.sotxt.TabIndex = 0;
-            this.sotxt.LostFocus += new System.EventHandler(this.sotxt_LostFocus);
             // 
             // fromidtxt
             // 
@@ -78,7 +77,6 @@
             this.fromidtxt.Name = "fromidtxt";
             this.fromidtxt.Size = new System.Drawing.Size(231, 23);
             this.fromidtxt.TabIndex = 2;
-            this.fromidtxt.LostFocus += new System.EventHandler(this.fromidtxt_LostFocus);
             // 
             // rfLabel2
             // 
@@ -96,7 +94,6 @@
             this.skutxt.Name = "skutxt";
             this.skutxt.Size = new System.Drawing.Size(231, 23);
             this.skutxt.TabIndex = 3;
-            this.skutxt.LostFocus += new System.EventHandler(this.skutxt_LostFocus);
             // 
             // rfLabel3
             // 
@@ -114,7 +111,6 @@
             this.qtytxt.Name = "qtytxt";
             this.qtytxt.Size = new System.Drawing.Size(231, 23);
             this.qtytxt.TabIndex = 4;
-            this.qtytxt.LostFocus += new System.EventHandler(this.qtytxt_LostFocus);
             // 
             // rfLabel4
             // 
@@ -132,7 +128,6 @@
             this.dropidtxt.Name = "dropidtxt";
             this.dropidtxt.Size = new System.Drawing.Size(231, 23);
             this.dropidtxt.TabIndex = 5;
-            this.dropidtxt.LostFocus += new System.EventHandler(this.dropidtxt_LostFocus);
             // 
             // rfLabel5
             // 
