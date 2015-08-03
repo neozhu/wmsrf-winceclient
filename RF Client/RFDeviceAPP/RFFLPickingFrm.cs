@@ -302,13 +302,13 @@ namespace RFDeviceAPP
         {
             if (skutxt.Text.Length > 0)
             {
-                string errortxt = this.Vaildate();
-                if (errortxt != string.Empty)
-                {
-                    MessageBox.Show(errortxt);
-                    this.focusControl.Focus();
-                    return;
-                }
+                //string errortxt = this.Vaildate();
+                //if (errortxt != string.Empty)
+                //{
+                //    MessageBox.Show(errortxt);
+                //    this.focusControl.Focus();
+                //    return;
+                //}
 
                 this.call_NSPRFFLREMQTY(this.sotxt.Text, this.fromidtxt.Text, this.skutxt.Text);
             }

@@ -76,7 +76,7 @@
             this.fromidtxt.Location = new System.Drawing.Point(4, 87);
             this.fromidtxt.Name = "fromidtxt";
             this.fromidtxt.Size = new System.Drawing.Size(231, 23);
-            this.fromidtxt.TabIndex = 2;
+            this.fromidtxt.TabIndex = 1;
             // 
             // rfLabel2
             // 
@@ -93,7 +93,8 @@
             this.skutxt.Location = new System.Drawing.Point(4, 124);
             this.skutxt.Name = "skutxt";
             this.skutxt.Size = new System.Drawing.Size(231, 23);
-            this.skutxt.TabIndex = 3;
+            this.skutxt.TabIndex = 2;
+            this.skutxt.LostFocus += new System.EventHandler(this.skutxt_LostFocus);
             // 
             // rfLabel3
             // 
@@ -110,7 +111,7 @@
             this.qtytxt.Location = new System.Drawing.Point(4, 161);
             this.qtytxt.Name = "qtytxt";
             this.qtytxt.Size = new System.Drawing.Size(231, 23);
-            this.qtytxt.TabIndex = 4;
+            this.qtytxt.TabIndex = 3;
             // 
             // rfLabel4
             // 
@@ -127,7 +128,7 @@
             this.dropidtxt.Location = new System.Drawing.Point(4, 198);
             this.dropidtxt.Name = "dropidtxt";
             this.dropidtxt.Size = new System.Drawing.Size(231, 23);
-            this.dropidtxt.TabIndex = 5;
+            this.dropidtxt.TabIndex = 4;
             // 
             // rfLabel5
             // 
@@ -144,7 +145,7 @@
             this.loadcasetxt.Location = new System.Drawing.Point(4, 235);
             this.loadcasetxt.Name = "loadcasetxt";
             this.loadcasetxt.Size = new System.Drawing.Size(231, 23);
-            this.loadcasetxt.TabIndex = 6;
+            this.loadcasetxt.TabIndex = 5;
             // 
             // rfLabel6
             // 
@@ -202,7 +203,7 @@
             this.submitbt.Location = new System.Drawing.Point(135, 358);
             this.submitbt.Name = "submitbt";
             this.submitbt.Size = new System.Drawing.Size(100, 48);
-            this.submitbt.TabIndex = 7;
+            this.submitbt.TabIndex = 6;
             this.submitbt.Text = "OK";
             this.submitbt.Click += new System.EventHandler(this.submitbt_Click);
             // 

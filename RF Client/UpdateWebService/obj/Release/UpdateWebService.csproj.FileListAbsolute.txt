@@ -1,0 +1,5 @@
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\bin\UpdateWebService.dll
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\bin\UpdateWebService.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\obj\Release\ResolveAssemblyReference.cache
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\obj\Release\UpdateWebService.dll
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateWebService\obj\Release\UpdateWebService.pdb

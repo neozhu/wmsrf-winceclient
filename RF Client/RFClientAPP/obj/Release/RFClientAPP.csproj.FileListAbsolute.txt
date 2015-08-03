@@ -1,0 +1,6 @@
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFClientAPP\bin\Release\RFClientAPP.exe.config
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFClientAPP\bin\Release\RFClientAPP.exe
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFClientAPP\bin\Release\RFClientAPP.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFClientAPP\obj\Release\ResolveAssemblyReference.cache
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFClientAPP\obj\Release\RFClientAPP.exe
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFClientAPP\obj\Release\RFClientAPP.pdb

@@ -1,0 +1,8 @@
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\bin\Release\UpdateClient.exe
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\bin\Release\UpdateClient.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\obj\Release\ResolveAssemblyReference.cache
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\obj\Release\UpdateClient.Form1.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\obj\Release\UpdateClient.Properties.Resources.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\obj\Release\UpdateClient.csproj.GenerateResource.Cache
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\obj\Release\UpdateClient.exe
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\UpdateClient\obj\Release\UpdateClient.pdb
