@@ -201,7 +201,9 @@ namespace RFDeviceAPP
                 return;
             }
             //this.Start();
-            if (this.dropidtxt.Text.Substring(0, 1).ToUpper() == "P") {
+
+            if (this.isrequiredid && this.dropidtxt.Text.Substring(0, 1).ToUpper() == "P")
+            {
                 this.pick_req2.UtilityHeader.cartontype = "PALLET";
             };
             RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
