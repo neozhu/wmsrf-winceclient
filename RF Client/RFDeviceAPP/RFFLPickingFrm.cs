@@ -201,6 +201,9 @@ namespace RFDeviceAPP
                 return;
             }
             //this.Start();
+            if (this.dropidtxt.Text.Substring(0, 1).ToUpper() == "P") {
+                this.pick_req2.UtilityHeader.cartontype = "PALLET";
+            };
             RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
                   enumMessageType.Utility,
                   enumRequestMethod.functionOperation, this.loginuser,
@@ -292,7 +295,7 @@ namespace RFDeviceAPP
             {
                 if (string.IsNullOrEmpty(errortxt))
                     focusControl = this.dropidtxt;
-                errortxt += "区域拣货中必须输入ID";
+                errortxt += "区域拣货中必须十位的ID号码";
                  
             }
 
