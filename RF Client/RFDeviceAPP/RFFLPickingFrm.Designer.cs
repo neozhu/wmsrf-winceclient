@@ -68,6 +68,7 @@
             this.sotxt.Name = "sotxt";
             this.sotxt.Size = new System.Drawing.Size(231, 23);
             this.sotxt.TabIndex = 0;
+            this.sotxt.LostFocus += new System.EventHandler(this.sotxt_LostFocus);
             // 
             // fromidtxt
             // 

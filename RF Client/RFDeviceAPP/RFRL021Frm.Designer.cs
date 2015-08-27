@@ -52,7 +52,7 @@
             // rfLabel1
             // 
             this.rfLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.rfLabel1.Location = new System.Drawing.Point(4, 33);
+            this.rfLabel1.Location = new System.Drawing.Point(4, 31);
             this.rfLabel1.Name = "rfLabel1";
             this.rfLabel1.Size = new System.Drawing.Size(106, 14);
             this.rfLabel1.Text = "自周转箱";
@@ -61,7 +61,7 @@
             // 
             this.movableunit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.movableunit.Location = new System.Drawing.Point(4, 47);
+            this.movableunit.Location = new System.Drawing.Point(4, 45);
             this.movableunit.Name = "movableunit";
             this.movableunit.Size = new System.Drawing.Size(231, 23);
             this.movableunit.TabIndex = 2;
@@ -90,7 +90,7 @@
             // 
             // toloc
             // 
-            this.toloc.Location = new System.Drawing.Point(3, 187);
+            this.toloc.Location = new System.Drawing.Point(4, 125);
             this.toloc.Name = "toloc";
             this.toloc.Size = new System.Drawing.Size(100, 23);
             this.toloc.TabIndex = 4;
@@ -98,7 +98,7 @@
             // rfLabel3
             // 
             this.rfLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.rfLabel3.Location = new System.Drawing.Point(3, 173);
+            this.rfLabel3.Location = new System.Drawing.Point(4, 111);
             this.rfLabel3.Name = "rfLabel3";
             this.rfLabel3.Size = new System.Drawing.Size(89, 14);
             this.rfLabel3.Text = "至集货区库位";
@@ -139,9 +139,9 @@
             this.submitbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.submitbtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.submitbtn.Location = new System.Drawing.Point(153, 228);
+            this.submitbtn.Location = new System.Drawing.Point(158, 153);
             this.submitbtn.Name = "submitbtn";
-            this.submitbtn.Size = new System.Drawing.Size(81, 57);
+            this.submitbtn.Size = new System.Drawing.Size(77, 50);
             this.submitbtn.TabIndex = 5;
             this.submitbtn.Text = "集货";
             this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click);
@@ -150,7 +150,7 @@
             // 
             this.toloc1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.toloc1.Location = new System.Drawing.Point(109, 187);
+            this.toloc1.Location = new System.Drawing.Point(110, 125);
             this.toloc1.Name = "toloc1";
             this.toloc1.ReadOnly = true;
             this.toloc1.Size = new System.Drawing.Size(125, 23);
@@ -160,7 +160,7 @@
             // 
             this.totagtxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.totagtxt.Location = new System.Drawing.Point(4, 85);
+            this.totagtxt.Location = new System.Drawing.Point(4, 83);
             this.totagtxt.Name = "totagtxt";
             this.totagtxt.Size = new System.Drawing.Size(231, 23);
             this.totagtxt.TabIndex = 3;
@@ -169,7 +169,7 @@
             // totag
             // 
             this.totag.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.totag.Location = new System.Drawing.Point(4, 71);
+            this.totag.Location = new System.Drawing.Point(4, 69);
             this.totag.Name = "totag";
             this.totag.Size = new System.Drawing.Size(106, 14);
             this.totag.Text = "至周转箱";
@@ -178,11 +178,11 @@
             // 
             this.totagtxtlist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.totagtxtlist.Location = new System.Drawing.Point(4, 117);
+            this.totagtxtlist.Location = new System.Drawing.Point(5, 153);
             this.totagtxtlist.Name = "totagtxtlist";
-            this.totagtxtlist.Size = new System.Drawing.Size(230, 50);
+            this.totagtxtlist.Size = new System.Drawing.Size(147, 50);
             this.totagtxtlist.TabIndex = 22;
-            this.totagtxtlist.SelectedIndexChanged += new System.EventHandler(this.totagtxtlist_DoubleClick);
+            this.totagtxtlist.SelectedIndexChanged += new System.EventHandler(this.totagtxtlist_OnDoubleClick);
             // 
             // RFRL021Frm
             // 

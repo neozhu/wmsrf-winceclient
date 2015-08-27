@@ -34,13 +34,17 @@ namespace RFDeviceAPP
             threadhelper.AllWorkItemCompleted += new EventHandler(threadhelper_AllWorkItemCompleted);
             threadhelper.WorkItemCompleted += new EventHandler<WorkItemEventArgs>(threadhelper_WorkItemCompleted);
             threadhelper.WorkItemFailed += new EventHandler<WorkItemEventArgs>(threadhelper_WorkItemFailed);
+            //pop_wu
+            //this.totagtxt.Focus();
             this.movableunit.Focus();
+            //pop_wu
         }
         #region threadhelper
         public void clear()
         {
             this.movableunit.Clean();
             this.movableunit.SetFocus();
+            //this.totagtxt.SetFocus();
             this.sku.Clean();
             this.desc.Clean();
             this.fromloc.Clean();
@@ -109,7 +113,12 @@ namespace RFDeviceAPP
         public string Vaildate()
         {
             string errortxt = string.Empty;
-            if (this.movableunit.Text.Length == 0)
+            //if (this.movableunit.Text.Length == 0)
+            //{
+            //    focusControl = this.fromloc;
+            //    errortxt += "LPN必填";
+            //}
+            if (this.totagtxtlist.Items.Count == 0)
             {
                 focusControl = this.fromloc;
                 errortxt += "LPN必填";
@@ -175,11 +184,12 @@ namespace RFDeviceAPP
                     {
                         //this.toloc1.SetText(this.RL021res.UtilityHeader.FromLoc);
                         this.toloc1.SetText(this.RL021res.UtilityHeader.ToLoc);
-                        _toloc1 = this.toloc1.Text;
+                        movableunitlist(this.movableunit.Text);
+                        this.movableunit.Focus();
                     }
                     else
                     {
-                        totaglist(this.totagtxt.Text);
+                        //movableunitlist(this.movableunit.Text);
                     }
                     //this.totagtxt.SetText(this.RL021res.UtilityHeader.totag);
                     //DialogResult result = MessageBox.Show("拣货完成，是否获取新任务？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
@@ -244,7 +254,7 @@ namespace RFDeviceAPP
             RL02req.UtilityHeader.fromloc = header.FromLoc;
             RL02req.UtilityHeader.fromtag = header.fromtag;
             RL02req.UtilityHeader.lotnum = header.lotnum;
-            RL02req.UtilityHeader.MovableUnit = this.movableunit.Text;
+            //RL02req.UtilityHeader.MovableUnit = this.movableunit.Text;
             RL02req.UtilityHeader.sku = header.Sku;
             RL02req.UtilityHeader.storer = header.storer;
 
@@ -252,7 +262,7 @@ namespace RFDeviceAPP
             //RL02req.UtilityHeader.totag = header.totag;
             RL02req.UtilityHeader.totag = this.totagtxt.Text;
             RL02req.UtilityHeader.uom = header.UOM;
-
+            RL02req.UtilityHeader.toloc = this.toloc.Text;
             //2015-8-17  wuziqing
             int n = this.totagtxtlist.Items.Count;
             if (n > 0)
@@ -260,7 +270,7 @@ namespace RFDeviceAPP
                 string errormsg = string.Empty;
                 for (int i = 0; i < n; i++)
                 {
-                    RL02req.UtilityHeader.toloc = totagtxtlist.Items[i].ToString();
+                    RL02req.UtilityHeader.MovableUnit = totagtxtlist.Items[i].ToString();
                     RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
                       enumMessageType.Utility,
                       enumRequestMethod.functionOperation, this.loginuser,
@@ -268,9 +278,12 @@ namespace RFDeviceAPP
                       this.RL02req);
                         //RequestWorkItem workitem = new RequestWorkItem(requestmessage, 2);
                         //threadhelper.AddWorkItem(workitem);
+                    //string ssxml = requestmessage.XmlString;
                     ResponseMessage Response = ThreadHelper.Execute(requestmessage);
+                    string sxml = Response.XmlString;
                     errormsg = Response.GetErrorMessage();
                     this.RL02res = Response.Deserialize<RL02_res.Utility>();
+                    _toloc1 = this.RL02res.UtilityHeader.allLoc.ToString();
                     
                 }
                 if (errormsg != string.Empty)
@@ -287,45 +300,15 @@ namespace RFDeviceAPP
                     }
                     else
                     {
-                        MessageBox.Show("已集货" + _toloc1, "提示");
+                        MessageBox.Show("已集货", "提示");
                     }
                     this.clear();
                 }
             }
-            //RL02req.UtilityHeader.toloc = this.toloc.Text;
-            //2015-8-17  wuziqing
-
-            //RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
-            //      enumMessageType.Utility,
-            //      enumRequestMethod.functionOperation, this.loginuser,
-            //      enumSendSysId.EXceed,
-            //      this.RL02req);
-            ////RequestWorkItem workitem = new RequestWorkItem(requestmessage, 2);
-            ////threadhelper.AddWorkItem(workitem);
-            //ResponseMessage Response = ThreadHelper.Execute(requestmessage);
-            //string errormsg = Response.GetErrorMessage();
-            //if (errormsg != string.Empty)
-            //{
-            //    MessageBox.Show(errormsg);
-            //    //this.RL021res = null;
-            //    //this.RL02req = null;
-            //}
-            //else
-            //{
-            //    this.RL02res = Response.Deserialize<RL02_res.Utility>();
-            //    if (this.RL02res.UtilityHeader.rectype == "2")
-            //    {
-            //        MessageBox.Show("订单集货完成", "提示");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("已集货", "提示");
-            //    }
-            //    this.clear();
-            //}
 
         }
         #endregion
+
         private void RFRL021Frm_Load(object sender, EventArgs e)
         {
 
@@ -345,7 +328,16 @@ namespace RFDeviceAPP
         {
             if (this.movableunit.Text.Length > 0)
             {
-                NSPRFRL021(this.movableunit.Text,true);
+                NSPRFRL021(this.movableunit.Text, true);
+                if (this.totagtxt.Text.Length < 0)
+                {
+                    this.totagtxt.Focus();
+                }
+                else
+                {
+                    this.movableunit.Focus();
+                }
+                this.movableunit.Text = string.Empty;
             }
         }
 
@@ -354,27 +346,23 @@ namespace RFDeviceAPP
             if (this.totagtxt.Text.Length > 0)
             {
                 NSPRFRL021(this.totagtxt.Text,false);
-                this.totagtxt.Text = string.Empty;
+                //this.movableunit.Focus();
             }
         }
 
-        public void totaglist(string totagtext) {
-            this.totagtxtlist.Items.Add(totagtext);
-            this.totagtxt.Focus();
+        public void movableunitlist(string movableunittext)
+        {
+            this.totagtxtlist.Items.Add(movableunittext);
+            //this.movableunit.Focus();
         }
 
-        private void totagtxtlist_DoubleClick(object sender, EventArgs e)
+        private void totagtxtlist_OnDoubleClick(object sender, EventArgs e)
         {
-            if(this.totagtxtlist != null)
+
+            int n = this.totagtxtlist.Items.Count;
+            if (totagtxtlist.SelectedItem != null && n > 0)
             {
-                int n = this.totagtxtlist.Items.Count;
-                if( n > 0 )
-                {
-                    for (int i = n-1; i>=0; i--)
-                    {
-                        this.totagtxtlist.Items.Remove(totagtxtlist.SelectedItem);
-                    }
-                }
+                this.totagtxtlist.Items.Remove(totagtxtlist.SelectedItem);
             }
         }
     }

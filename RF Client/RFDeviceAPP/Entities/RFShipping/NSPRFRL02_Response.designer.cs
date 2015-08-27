@@ -40,6 +40,7 @@ namespace RFDeviceAPP.Common.NSPRFRL02.Response
 
     public partial class UtilityHeader
     {
+        private string allLocField;
 
         private string errmsgField;
 
@@ -48,6 +49,18 @@ namespace RFDeviceAPP.Common.NSPRFRL02.Response
         private string rectotalField;
 
         private string dateFormateField;
+
+        public string allLoc
+        {
+            get
+            {
+                return this.allLocField;
+            }
+            set
+            {
+                this.allLocField = value;
+            }
+        }
 
         public string errmsg
         {

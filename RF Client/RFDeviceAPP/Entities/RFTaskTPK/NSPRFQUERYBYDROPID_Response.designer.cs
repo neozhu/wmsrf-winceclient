@@ -50,7 +50,7 @@ namespace RFDeviceAPP.Common.NSPRFQUERYBYDROPID.Response
 
         private string ALLDROPIDField;
 
-
+        private string ALLLOCANDIDField;
 
         public string WaveKey
         {
@@ -100,6 +100,17 @@ namespace RFDeviceAPP.Common.NSPRFQUERYBYDROPID.Response
             }
         }
 
+        public string ALLLOCANDID
+        {
+            get
+            {
+                return this.ALLLOCANDIDField;
+            }
+            set
+            {
+                this.ALLLOCANDIDField = value;
+            }
+        }
         
     }
 }

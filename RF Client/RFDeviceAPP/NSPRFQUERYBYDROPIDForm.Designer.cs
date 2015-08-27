@@ -38,6 +38,8 @@
             this.isfullpickedtxt = new RFDeviceAPP.Common.rfTextBox();
             this.rfLabel4 = new RFDeviceAPP.Common.rfLabel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.SuspendLayout();
             // 
             // userStatusControl1
@@ -131,14 +133,34 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.Location = new System.Drawing.Point(3, 209);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(232, 130);
+            this.listBox1.Size = new System.Drawing.Size(232, 66);
             this.listBox1.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
+            this.label1.Location = new System.Drawing.Point(3, 277);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 18);
+            this.label1.Text = "未拣箱ID";
+            // 
+            // dataGrid1
+            // 
+            this.dataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGrid1.Location = new System.Drawing.Point(3, 292);
+            this.dataGrid1.Name = "dataGrid1";
+            this.dataGrid1.Size = new System.Drawing.Size(231, 68);
+            this.dataGrid1.TabIndex = 23;
             // 
             // NSPRFQUERYBYDROPIDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(238, 360);
+            this.Controls.Add(this.dataGrid1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.rfLabel4);
             this.Controls.Add(this.label33);
@@ -162,6 +184,8 @@
             this.Controls.SetChildIndex(this.label33, 0);
             this.Controls.SetChildIndex(this.rfLabel4, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.dataGrid1, 0);
             this.ResumeLayout(false);
 
         }
@@ -178,5 +202,7 @@
         private RFDeviceAPP.Common.rfTextBox isfullpickedtxt;
         private RFDeviceAPP.Common.rfLabel rfLabel4;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGrid dataGrid1;
     }
 }
