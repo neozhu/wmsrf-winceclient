@@ -185,6 +185,10 @@ namespace RFDeviceAPP
             {
                 this.msglab.Text = "华硕备件库";
             }
+            else if (this.whcodecombo.Text == "FEILI_wmwhse21")
+            {
+                this.msglab.Text = "禧玛诺";
+            }
             else
             {
                 this.msglab.Text = "测试环境";

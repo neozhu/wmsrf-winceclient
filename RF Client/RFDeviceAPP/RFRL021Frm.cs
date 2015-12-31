@@ -283,7 +283,10 @@ namespace RFDeviceAPP
                     string sxml = Response.XmlString;
                     errormsg = Response.GetErrorMessage();
                     this.RL02res = Response.Deserialize<RL02_res.Utility>();
-                    _toloc1 = this.RL02res.UtilityHeader.allLoc.ToString();
+                    if (errormsg == string.Empty)
+                    {
+                        _toloc1 = this.RL02res.UtilityHeader.allLoc.ToString();
+                    }
                     
                 }
                 if (errormsg != string.Empty)

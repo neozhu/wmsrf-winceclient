@@ -42,6 +42,7 @@
             // 
             // rfLabel1
             // 
+            this.rfLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
             this.rfLabel1.Location = new System.Drawing.Point(4, 33);
             this.rfLabel1.Name = "rfLabel1";
             this.rfLabel1.Size = new System.Drawing.Size(43, 14);
@@ -67,6 +68,7 @@
             // 
             // rfLabel2
             // 
+            this.rfLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
             this.rfLabel2.Location = new System.Drawing.Point(4, 73);
             this.rfLabel2.Name = "rfLabel2";
             this.rfLabel2.Size = new System.Drawing.Size(43, 14);

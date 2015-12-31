@@ -23,6 +23,7 @@ namespace RFDeviceAPP
         private RL021_res.Utility RL021res;
         private RL02_req.Utility RL02req;
         private RL02_res.Utility RL02res;
+        string _toloc1 = string.Empty;
 
         public RFRL021_2Frm(UserInfo loginuser)
             : base(loginuser)
@@ -175,17 +176,50 @@ namespace RFDeviceAPP
             RL02req.UtilityHeader.sku = header.Sku;
             RL02req.UtilityHeader.storer = header.storer;
             RL02req.UtilityHeader.toloc = this.toloc.Text;
+
             RL02req.UtilityHeader.toqty = header.Qty;
             RL02req.UtilityHeader.totag = header.totag;
             RL02req.UtilityHeader.uom = header.UOM;
-     
-            RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
-                  enumMessageType.Utility,
-                  enumRequestMethod.functionOperation, this.loginuser,
-                  enumSendSysId.EXceed,
-                  this.RL02req);
-            RequestWorkItem workitem = new RequestWorkItem(requestmessage, 2);
-            threadhelper.AddWorkItem(workitem);
+            int n = this.totagtxtlist.Items.Count;
+            if (n > 0)
+            {
+                string errormsg = string.Empty;
+                for (int i = 0; i < n; i++)
+                {
+                    RL02req.UtilityHeader.MovableUnit = totagtxtlist.Items[i].ToString();
+
+                    RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
+                          enumMessageType.Utility,
+                          enumRequestMethod.functionOperation, this.loginuser,
+                          enumSendSysId.EXceed,
+                          this.RL02req);
+                    ResponseMessage Response = ThreadHelper.Execute(requestmessage);
+                    string sxml = Response.XmlString;
+                    errormsg = Response.GetErrorMessage();
+                    this.RL02res = Response.Deserialize<RL02_res.Utility>();
+                    if (errormsg == string.Empty)
+                    {
+                        _toloc1 = this.RL02res.UtilityHeader.allLoc.ToString();
+                    }
+
+                }
+                if (errormsg != string.Empty)
+                {
+                    MessageBox.Show(errormsg);
+                }
+                else
+                {
+                    if (this.RL02res.UtilityHeader.rectype == "2")
+                    {
+                        MessageBox.Show("订单集货完成" + _toloc1, "提示");
+                    }
+                    else
+                    {
+                        MessageBox.Show("已集货", "提示");
+                    }
+                    this.clear();
+                }
+            }
         }
         #endregion
         private void RFRL021Frm_Load(object sender, EventArgs e)
@@ -208,6 +242,8 @@ namespace RFDeviceAPP
             if (this.movableunit.Text.Length > 0)
             {
                 NSPRFRL021();
+                this.totagtxtlist.Items.Add(this.movableunit.Text);
+                this.movableunit.Text = string.Empty;
             }
         }
     }

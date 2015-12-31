@@ -62,6 +62,7 @@
             this.whcodecombo.Items.Add("FEILI_wmwhse9");
             this.whcodecombo.Items.Add("FEILI_wmwhse10");
             this.whcodecombo.Items.Add("FEILI_wmwhse1");
+            this.whcodecombo.Items.Add("FEILI_wmwhse21");
             this.whcodecombo.Location = new System.Drawing.Point(4, 83);
             this.whcodecombo.Name = "whcodecombo";
             this.whcodecombo.Size = new System.Drawing.Size(231, 23);
