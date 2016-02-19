@@ -39,7 +39,6 @@
             this.desc = new RFDeviceAPP.Common.rfTextBox();
             this.submitbtn = new RFDeviceAPP.Common.rfButtonCommand();
             this.toloc1 = new RFDeviceAPP.Common.rfTextBox();
-            this.totagtxtlist = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // userStatusControl1
@@ -70,7 +69,7 @@
             // 
             this.fromloc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.fromloc.Location = new System.Drawing.Point(4, 256);
+            this.fromloc.Location = new System.Drawing.Point(4, 85);
             this.fromloc.Name = "fromloc";
             this.fromloc.ReadOnly = true;
             this.fromloc.Size = new System.Drawing.Size(231, 23);
@@ -79,14 +78,14 @@
             // rfLabel2
             // 
             this.rfLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.rfLabel2.Location = new System.Drawing.Point(4, 242);
+            this.rfLabel2.Location = new System.Drawing.Point(4, 71);
             this.rfLabel2.Name = "rfLabel2";
             this.rfLabel2.Size = new System.Drawing.Size(72, 14);
             this.rfLabel2.Text = "自库位";
             // 
             // toloc
             // 
-            this.toloc.Location = new System.Drawing.Point(3, 85);
+            this.toloc.Location = new System.Drawing.Point(3, 123);
             this.toloc.Name = "toloc";
             this.toloc.Size = new System.Drawing.Size(100, 23);
             this.toloc.TabIndex = 3;
@@ -94,7 +93,7 @@
             // rfLabel3
             // 
             this.rfLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.rfLabel3.Location = new System.Drawing.Point(3, 71);
+            this.rfLabel3.Location = new System.Drawing.Point(3, 109);
             this.rfLabel3.Name = "rfLabel3";
             this.rfLabel3.Size = new System.Drawing.Size(89, 14);
             this.rfLabel3.Text = "至集货区库位";
@@ -103,7 +102,7 @@
             // 
             this.sku.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.sku.Location = new System.Drawing.Point(4, 192);
+            this.sku.Location = new System.Drawing.Point(4, 160);
             this.sku.Name = "sku";
             this.sku.ReadOnly = true;
             this.sku.Size = new System.Drawing.Size(231, 23);
@@ -112,7 +111,7 @@
             // s1ku111
             // 
             this.s1ku111.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.s1ku111.Location = new System.Drawing.Point(4, 178);
+            this.s1ku111.Location = new System.Drawing.Point(4, 146);
             this.s1ku111.Name = "s1ku111";
             this.s1ku111.Size = new System.Drawing.Size(203, 14);
             this.s1ku111.Text = "SKU数/已包装箱数/总箱数";
@@ -121,7 +120,7 @@
             // 
             this.desc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.desc.Location = new System.Drawing.Point(4, 216);
+            this.desc.Location = new System.Drawing.Point(4, 184);
             this.desc.Name = "desc";
             this.desc.ReadOnly = true;
             this.desc.Size = new System.Drawing.Size(231, 23);
@@ -133,9 +132,9 @@
             this.submitbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.submitbtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.submitbtn.Location = new System.Drawing.Point(153, 114);
+            this.submitbtn.Location = new System.Drawing.Point(153, 213);
             this.submitbtn.Name = "submitbtn";
-            this.submitbtn.Size = new System.Drawing.Size(81, 51);
+            this.submitbtn.Size = new System.Drawing.Size(81, 57);
             this.submitbtn.TabIndex = 5;
             this.submitbtn.Text = "集货";
             this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click);
@@ -144,24 +143,16 @@
             // 
             this.toloc1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.toloc1.Location = new System.Drawing.Point(109, 85);
+            this.toloc1.Location = new System.Drawing.Point(109, 123);
             this.toloc1.Name = "toloc1";
             this.toloc1.Size = new System.Drawing.Size(125, 23);
             this.toloc1.TabIndex = 17;
-            // 
-            // totagtxtlist
-            // 
-            this.totagtxtlist.Location = new System.Drawing.Point(4, 115);
-            this.totagtxtlist.Name = "totagtxtlist";
-            this.totagtxtlist.Size = new System.Drawing.Size(143, 50);
-            this.totagtxtlist.TabIndex = 33;
             // 
             // RFRL021_2Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(238, 283);
-            this.Controls.Add(this.totagtxtlist);
             this.Controls.Add(this.toloc1);
             this.Controls.Add(this.submitbtn);
             this.Controls.Add(this.desc);
@@ -188,7 +179,6 @@
             this.Controls.SetChildIndex(this.desc, 0);
             this.Controls.SetChildIndex(this.submitbtn, 0);
             this.Controls.SetChildIndex(this.toloc1, 0);
-            this.Controls.SetChildIndex(this.totagtxtlist, 0);
             this.ResumeLayout(false);
 
         }
@@ -206,6 +196,5 @@
         private RFDeviceAPP.Common.rfTextBox desc;
         private RFDeviceAPP.Common.rfButtonCommand submitbtn;
         private RFDeviceAPP.Common.rfTextBox toloc1;
-        private System.Windows.Forms.ListBox totagtxtlist;
     }
 }

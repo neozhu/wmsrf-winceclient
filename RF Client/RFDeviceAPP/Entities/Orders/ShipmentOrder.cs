@@ -60,6 +60,15 @@ namespace RFDeviceAPP.Common.Orders
             return order;
         }
 
+        public static ShipmentOrder CreatePOD(string orderkey)
+        {
+            ShipmentOrder order = new ShipmentOrder();
+            ShipmentOrderHeader soh = new ShipmentOrderHeader();
+            soh.OrderKey = orderkey;
+            order.ShipmentOrderHeader = soh;
+            return order;
+        }
+
 
         private ShipmentOrderHeader shipmentOrderHeaderField;
 
@@ -125,6 +134,8 @@ namespace RFDeviceAPP.Common.Orders
         private string performanceData19Field;
 
         private string performanceData20Field;
+
+        private string susr15Field;
 
         public string OrderKey
         {
@@ -375,6 +386,18 @@ namespace RFDeviceAPP.Common.Orders
             set
             {
                 this.performanceData20Field = value;
+            }
+        }
+
+        public string SUSR15
+        {
+            get
+            {
+                return this.susr15Field;
+            }
+            set
+            {
+                this.susr15Field = value;
             }
         }
     }

@@ -40,12 +40,14 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.label2 = new System.Windows.Forms.Label();
+            this.susr15 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // userStatusControl1
             // 
             this.userStatusControl1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular);
-            this.userStatusControl1.Size = new System.Drawing.Size(238, 26);
+            this.userStatusControl1.Size = new System.Drawing.Size(221, 26);
             // 
             // rfLabel1
             // 
@@ -61,7 +63,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dropidtxt.Location = new System.Drawing.Point(3, 46);
             this.dropidtxt.Name = "dropidtxt";
-            this.dropidtxt.Size = new System.Drawing.Size(232, 23);
+            this.dropidtxt.Size = new System.Drawing.Size(215, 23);
             this.dropidtxt.TabIndex = 2;
             this.dropidtxt.LostFocus += new System.EventHandler(this.dropidtxt_LostFocus);
             // 
@@ -80,7 +82,7 @@
             this.wavekeytxt.Location = new System.Drawing.Point(3, 88);
             this.wavekeytxt.Name = "wavekeytxt";
             this.wavekeytxt.ReadOnly = true;
-            this.wavekeytxt.Size = new System.Drawing.Size(232, 23);
+            this.wavekeytxt.Size = new System.Drawing.Size(215, 23);
             this.wavekeytxt.TabIndex = 4;
             // 
             // rfLabel3
@@ -98,7 +100,7 @@
             this.orderkeytxt.Location = new System.Drawing.Point(3, 128);
             this.orderkeytxt.Name = "orderkeytxt";
             this.orderkeytxt.ReadOnly = true;
-            this.orderkeytxt.Size = new System.Drawing.Size(232, 23);
+            this.orderkeytxt.Size = new System.Drawing.Size(215, 23);
             this.orderkeytxt.TabIndex = 7;
             // 
             // label33
@@ -116,13 +118,13 @@
             this.isfullpickedtxt.Location = new System.Drawing.Point(3, 168);
             this.isfullpickedtxt.Name = "isfullpickedtxt";
             this.isfullpickedtxt.ReadOnly = true;
-            this.isfullpickedtxt.Size = new System.Drawing.Size(232, 23);
+            this.isfullpickedtxt.Size = new System.Drawing.Size(215, 23);
             this.isfullpickedtxt.TabIndex = 10;
             // 
             // rfLabel4
             // 
             this.rfLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.rfLabel4.Location = new System.Drawing.Point(3, 192);
+            this.rfLabel4.Location = new System.Drawing.Point(3, 238);
             this.rfLabel4.Name = "rfLabel4";
             this.rfLabel4.Size = new System.Drawing.Size(121, 14);
             this.rfLabel4.Text = "已拣箱ID";
@@ -131,15 +133,15 @@
             // 
             this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.Location = new System.Drawing.Point(3, 209);
+            this.listBox1.Location = new System.Drawing.Point(3, 255);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(232, 66);
+            this.listBox1.Size = new System.Drawing.Size(215, 66);
             this.listBox1.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.label1.Location = new System.Drawing.Point(3, 277);
+            this.label1.Location = new System.Drawing.Point(3, 323);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 18);
             this.label1.Text = "未拣箱ID";
@@ -149,16 +151,35 @@
             this.dataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGrid1.Location = new System.Drawing.Point(3, 292);
+            this.dataGrid1.Location = new System.Drawing.Point(3, 338);
             this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(231, 68);
+            this.dataGrid1.Size = new System.Drawing.Size(214, 68);
             this.dataGrid1.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
+            this.label2.Location = new System.Drawing.Point(4, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 14);
+            this.label2.Text = "装箱时间";
+            // 
+            // susr15
+            // 
+            this.susr15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.susr15.Location = new System.Drawing.Point(4, 213);
+            this.susr15.Name = "susr15";
+            this.susr15.Size = new System.Drawing.Size(214, 23);
+            this.susr15.TabIndex = 31;
             // 
             // NSPRFQUERYBYDROPIDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(238, 360);
+            this.Controls.Add(this.susr15);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -186,6 +207,8 @@
             this.Controls.SetChildIndex(this.listBox1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.dataGrid1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.susr15, 0);
             this.ResumeLayout(false);
 
         }
@@ -204,5 +227,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGrid dataGrid1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox susr15;
     }
 }

@@ -23,7 +23,6 @@ namespace RFDeviceAPP
         private RL021_res.Utility RL021res;
         private RL02_req.Utility RL02req;
         private RL02_res.Utility RL02res;
-        string _toloc1 = string.Empty;
 
         public RFRL021_2Frm(UserInfo loginuser)
             : base(loginuser)
@@ -73,7 +72,7 @@ namespace RFDeviceAPP
                     //DialogResult result = MessageBox.Show("拣货完成，是否获取新任务？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
                     //InvokeHelper.Invoke(this, "CloseWindow", result);
                 }
-                if (tag==2)
+                if (tag == 2)
                 {
                     this.RL02res = item.Response.Deserialize<RL02_res.Utility>();
                     if (this.RL02res.UtilityHeader.rectype == "2")
@@ -85,9 +84,9 @@ namespace RFDeviceAPP
                         MessageBox.Show("集货完成", "提示");
                     }
                     this.clear();
-                     
+
                 }
-                 
+
             }
         }
         void threadhelper_WorkItemFailed(object sender, WorkItemEventArgs e)
@@ -100,7 +99,7 @@ namespace RFDeviceAPP
             this.Stop();
         }
 
-        
+
         #endregion
 
         #region call api
@@ -141,7 +140,7 @@ namespace RFDeviceAPP
         {
             this.Start();
             this.RL021req = RL021_req.Utility.Create(this.movableunit.Text);
-            
+
             RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
                   enumMessageType.Utility,
                   enumRequestMethod.functionOperation, this.loginuser,
@@ -165,7 +164,7 @@ namespace RFDeviceAPP
             //UserInfo admin = new UserInfo();
             //admin.Password = "sceadmin";
             //admin.UserName = "sceadmin";
-            RL021_res.UtilityHeader header=RL021res.UtilityHeader;
+            RL021_res.UtilityHeader header = RL021res.UtilityHeader;
             RL02req = new RFDeviceAPP.Common.NSPRFRL02.Request.Utility();
             RL02req.UtilityHeader.caseid = header.CaseID;
             RL02req.UtilityHeader.desc = header.Descr;
@@ -176,50 +175,17 @@ namespace RFDeviceAPP
             RL02req.UtilityHeader.sku = header.Sku;
             RL02req.UtilityHeader.storer = header.storer;
             RL02req.UtilityHeader.toloc = this.toloc.Text;
-
             RL02req.UtilityHeader.toqty = header.Qty;
             RL02req.UtilityHeader.totag = header.totag;
             RL02req.UtilityHeader.uom = header.UOM;
-            int n = this.totagtxtlist.Items.Count;
-            if (n > 0)
-            {
-                string errormsg = string.Empty;
-                for (int i = 0; i < n; i++)
-                {
-                    RL02req.UtilityHeader.MovableUnit = totagtxtlist.Items[i].ToString();
 
-                    RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
-                          enumMessageType.Utility,
-                          enumRequestMethod.functionOperation, this.loginuser,
-                          enumSendSysId.EXceed,
-                          this.RL02req);
-                    ResponseMessage Response = ThreadHelper.Execute(requestmessage);
-                    string sxml = Response.XmlString;
-                    errormsg = Response.GetErrorMessage();
-                    this.RL02res = Response.Deserialize<RL02_res.Utility>();
-                    if (errormsg == string.Empty)
-                    {
-                        _toloc1 = this.RL02res.UtilityHeader.allLoc.ToString();
-                    }
-
-                }
-                if (errormsg != string.Empty)
-                {
-                    MessageBox.Show(errormsg);
-                }
-                else
-                {
-                    if (this.RL02res.UtilityHeader.rectype == "2")
-                    {
-                        MessageBox.Show("订单集货完成" + _toloc1, "提示");
-                    }
-                    else
-                    {
-                        MessageBox.Show("已集货", "提示");
-                    }
-                    this.clear();
-                }
-            }
+            RequestMessage requestmessage = new RequestMessage(enumRequestType.MessageProcessor,
+                  enumMessageType.Utility,
+                  enumRequestMethod.functionOperation, this.loginuser,
+                  enumSendSysId.EXceed,
+                  this.RL02req);
+            RequestWorkItem workitem = new RequestWorkItem(requestmessage, 2);
+            threadhelper.AddWorkItem(workitem);
         }
         #endregion
         private void RFRL021Frm_Load(object sender, EventArgs e)
@@ -229,7 +195,7 @@ namespace RFDeviceAPP
 
         private void movableunit_GotFocus(object sender, EventArgs e)
         {
-           
+
         }
 
         private void submitbtn_Click(object sender, EventArgs e)
@@ -242,8 +208,6 @@ namespace RFDeviceAPP
             if (this.movableunit.Text.Length > 0)
             {
                 NSPRFRL021();
-                this.totagtxtlist.Items.Add(this.movableunit.Text);
-                this.movableunit.Text = string.Empty;
             }
         }
     }

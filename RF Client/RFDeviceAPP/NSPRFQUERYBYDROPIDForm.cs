@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using RFDeviceAPP.Common;
 using RFDeviceAPP.Proxy;
+using RFDeviceAPP.Common.Orders;
 
 namespace RFDeviceAPP
 {
@@ -14,7 +15,6 @@ namespace RFDeviceAPP
     {
 
         private List<LocandID> locandidslist;
-
         public NSPRFQUERYBYDROPIDForm(UserInfo loginuser)
             : base(loginuser)
         {
@@ -49,9 +49,29 @@ namespace RFDeviceAPP
             {
                 this.wavekeytxt.Text = result.UtilityHeader.WaveKey;
                 this.orderkeytxt.Text = result.UtilityHeader.OrderKey;
-                this.isfullpickedtxt.Text = setState(result.UtilityHeader.ISFULLPICKED);
-                this.setlist(result.UtilityHeader.ALLDROPID);
-                this.setlist1(result.UtilityHeader.ALLLOCANDID);
+                if (!this.orderkeytxt.Text.Equals(""))
+                {
+                    ShipmentOrder spod = ShipmentOrder.CreatePOD(this.orderkeytxt.Text);
+                    RequestMessage searchrequest = new RequestMessage(enumRequestType.MessageProcessor,
+                      enumMessageType.ShipmentOrder,
+                      enumRequestMethod.list, this.LoginUser,
+                      enumSendSysId.EXceed,
+                      spod);
+
+                    ResponseMessage response1 = ThreadHelper.Execute(searchrequest);
+                    if (response1.GetErrorMessage() != string.Empty)
+                    {
+                        MessageBox.Show(response1.GetErrorMessage());
+                        this.dropidtxt.Focus();
+                    }
+                    else
+                    {
+                        RFDeviceAPP.Common.Orders.ShipmentOrder result1 = response1.Deserialize<RFDeviceAPP.Common.Orders.ShipmentOrder>();
+                        this.susr15.Text = result1.ShipmentOrderHeader.SUSR15;
+                    }
+                }
+
+
                 if (result.UtilityHeader.ISFULLPICKED == "0" && result.UtilityHeader.OrderKey.Length > 0)
                 {
                     MessageBox.Show("该订单拣货完成");
