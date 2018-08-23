@@ -1,0 +1,8 @@
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\bin\Debug\Kaifa.B2B.ImportService.exe
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\bin\Debug\Kaifa.B2B.ImportService.pdb
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\obj\Debug\ResolveAssemblyReference.cache
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\obj\Debug\Kaifa.B2B.ImportService.Kaifa_B2B_ImportService.resources
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\obj\Debug\Kaifa.B2B.ImportService.ProjectInstaller.resources
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\obj\Debug\Kaifa.B2B.ImportService.csproj.GenerateResource.Cache
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\obj\Debug\Kaifa.B2B.ImportService.exe
+D:\优杰项目\Kaifa.B2B.ImportService\Kaifa.B2B.ImportService\obj\Debug\Kaifa.B2B.ImportService.pdb

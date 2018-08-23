@@ -108,3 +108,14 @@ D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDevic
 D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.csproj.GenerateResource.Cache
 D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.exe
 D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.pdb
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmInstrcutionDetail.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmInstrcutions.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmRTRSku1.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmRTRSku2.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmRTRSku3.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmExpressPrint.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmScanSN1.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmScanSN2.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\obj\Release\RFDeviceAPP.FrmScanSN3.resources
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\bin\Release\app.config
+D:\wmsrf-winceclient\wmsrf-winceclient\RF Client\RFDeviceAPP\bin\Release\RFDeviceAPP.exe.config

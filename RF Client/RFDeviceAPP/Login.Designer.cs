@@ -63,6 +63,7 @@
             this.whcodecombo.Items.Add("FEILI_wmwhse10");
             this.whcodecombo.Items.Add("FEILI_wmwhse1");
             this.whcodecombo.Items.Add("FEILI_wmwhse21");
+            this.whcodecombo.Items.Add("FEILI_wmwhse40");
             this.whcodecombo.Location = new System.Drawing.Point(4, 83);
             this.whcodecombo.Name = "whcodecombo";
             this.whcodecombo.Size = new System.Drawing.Size(231, 23);
@@ -138,9 +139,12 @@
             // 
             this.server.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.server.Items.Add("http://172.20.70.95/WMSWebService");
-            this.server.Items.Add("http://172.20.70.54/WMSWebService");
-            this.server.Items.Add("http://172.20.70.95/WMSWebServiceTest");
+            this.server.Items.Add("http://172.20.80.115/WMSWebService");
+            this.server.Items.Add("http://172.20.80.114/WMSWebService");
+            this.server.Items.Add("http://172.20.60.96/WMSWebService");
+            //aup
+            this.server.Items.Add("http://172.20.70.252/WMSWebService");
+            //aup
             this.server.Location = new System.Drawing.Point(4, 33);
             this.server.Name = "server";
             this.server.Size = new System.Drawing.Size(231, 23);

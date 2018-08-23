@@ -115,6 +115,9 @@
     <Compile Include="DoClassifyFrm.Designer.cs">
       <DependentUpon>DoClassifyFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ExpressPrint\ExpressPrint.cs" />
+    <Compile Include="Entities\ExpressPrint\ExpressPrint_Request.designer.cs" />
+    <Compile Include="Entities\ExpressPrint\ExpressPrint_Response.designer.cs" />
     <Compile Include="Entities\Global.cs" />
     <Compile Include="Entities\move\NSPRFRL01B1FL_Request.designer.cs" />
     <Compile Include="Entities\move\NSPRFRL01B1FL_Response.designer.cs" />
@@ -132,9 +135,37 @@
     <Compile Include="Entities\RFTaskTPK\Task_Store_Request.designer.cs" />
     <Compile Include="Entities\RFTaskTPK\NSPRFQUERYBYDROPID_Request.designer.cs" />
     <Compile Include="Entities\RFTaskTPK\NSPRFQUERYBYDROPID_Response.designer.cs" />
+    <Compile Include="Entities\RTRSKU\RTRSku_Request.designer.cs" />
+    <Compile Include="Entities\RTRSKU\RTRSku_Response.designer.cs" />
+    <Compile Include="Entities\RTRSKU\RTRSku_Submit_Request.designer.cs" />
+    <Compile Include="Entities\RTRSKU\RTRSku_Submit_Response.designer.cs" />
+    <Compile Include="Entities\RTRSKU\RTRSku.cs" />
     <Compile Include="Entities\stock\Stock_Query_Request.designer.cs" />
     <Compile Include="Entities\stock\Stock_Query_Response.designer.cs" />
     <Compile Include="Entities\WhCode.cs" />
+    <Compile Include="Entities\WorkInstruction\Instructions.cs" />
+    <Compile Include="Entities\WorkInstruction\Instructions_Request.designer.cs" />
+    <Compile Include="Entities\WorkInstruction\Instructions_Response.designer.cs" />
+    <Compile Include="Entities\WorkInstruction\Instructions_Submit_Request.designer.cs" />
+    <Compile Include="Entities\WorkInstruction\Instructions_Submit_Response.designer.cs" />
+    <Compile Include="FrmExpressPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExpressPrint.Designer.cs">
+      <DependentUpon>FrmExpressPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInstrcutionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInstrcutionDetail.Designer.cs">
+      <DependentUpon>FrmInstrcutionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInstrcutions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInstrcutions.Designer.cs">
+      <DependentUpon>FrmInstrcutions.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPODCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +201,42 @@
     </Compile>
     <Compile Include="Frmreason.Designer.cs">
       <DependentUpon>Frmreason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRTRSku1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRTRSku1.Designer.cs">
+      <DependentUpon>FrmRTRSku1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRTRSku2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRTRSku2.Designer.cs">
+      <DependentUpon>FrmRTRSku2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRTRSku3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRTRSku3.Designer.cs">
+      <DependentUpon>FrmRTRSku3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScanSN1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScanSN1.Designer.cs">
+      <DependentUpon>FrmScanSN1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScanSN2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScanSN2.Designer.cs">
+      <DependentUpon>FrmScanSN2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScanSN3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScanSN3.Designer.cs">
+      <DependentUpon>FrmScanSN3.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmStockQuery.cs">
       <SubType>Form</SubType>
@@ -360,6 +427,15 @@
     <EmbeddedResource Include="DoClassifyFrm.resx">
       <DependentUpon>DoClassifyFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmExpressPrint.resx">
+      <DependentUpon>FrmExpressPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInstrcutionDetail.resx">
+      <DependentUpon>FrmInstrcutionDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInstrcutions.resx">
+      <DependentUpon>FrmInstrcutions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPODCheck.resx">
       <DependentUpon>FrmPODCheck.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +453,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frmreason.resx">
       <DependentUpon>Frmreason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRTRSku1.resx">
+      <DependentUpon>FrmRTRSku1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRTRSku2.resx">
+      <DependentUpon>FrmRTRSku2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRTRSku3.resx">
+      <DependentUpon>FrmRTRSku3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScanSN1.resx">
+      <DependentUpon>FrmScanSN1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScanSN2.resx">
+      <DependentUpon>FrmScanSN2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScanSN3.resx">
+      <DependentUpon>FrmScanSN3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStockQuery.resx">
       <DependentUpon>FrmStockQuery.cs</DependentUpon>
@@ -677,6 +771,9 @@
     <None Include="Web References\InfoWms.Api\WmsWebService.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Web References\updateservice\LiveUpdate.disco" />
     <None Include="Web References\updateservice\LiveUpdate.wsdl" />
     <None Include="Web References\updateservice\Reference.map">

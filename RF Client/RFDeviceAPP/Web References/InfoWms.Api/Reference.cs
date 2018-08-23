@@ -29,8 +29,10 @@ namespace RFDeviceAPP.InfoWms.Api {
         /// <remarks/>
         public WmsWebService() {
             this.Timeout = 900000;
+            this.Url = "http://172.20.80.56/WMSWebService/services/WmsWebService";
+            //this.Url = "http://sceapi03.feili.com/WMSWebService/services/WmsWebService";
             //this.Url = "http://172.20.70.95/WMSWebServiceTest/services/WmsWebService";
-            this.Url = "http://172.20.70.95/WMSWebService/services/WmsWebService";
+            //this.Url = "http://172.20.70.95/WMSWebService/services/WmsWebService";
             //this.Url = "http://172.20.70.58:8080/WMSWebService/services/WmsWebService";
         }
 

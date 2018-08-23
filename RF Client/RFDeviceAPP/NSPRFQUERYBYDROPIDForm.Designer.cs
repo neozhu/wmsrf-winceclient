@@ -47,7 +47,7 @@
             // userStatusControl1
             // 
             this.userStatusControl1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular);
-            this.userStatusControl1.Size = new System.Drawing.Size(221, 26);
+            this.userStatusControl1.Size = new System.Drawing.Size(238, 26);
             // 
             // rfLabel1
             // 
@@ -61,9 +61,9 @@
             // 
             this.dropidtxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dropidtxt.Location = new System.Drawing.Point(3, 46);
+            this.dropidtxt.Location = new System.Drawing.Point(4, 49);
             this.dropidtxt.Name = "dropidtxt";
-            this.dropidtxt.Size = new System.Drawing.Size(215, 23);
+            this.dropidtxt.Size = new System.Drawing.Size(197, 23);
             this.dropidtxt.TabIndex = 2;
             this.dropidtxt.LostFocus += new System.EventHandler(this.dropidtxt_LostFocus);
             // 
@@ -82,7 +82,7 @@
             this.wavekeytxt.Location = new System.Drawing.Point(3, 88);
             this.wavekeytxt.Name = "wavekeytxt";
             this.wavekeytxt.ReadOnly = true;
-            this.wavekeytxt.Size = new System.Drawing.Size(215, 23);
+            this.wavekeytxt.Size = new System.Drawing.Size(198, 23);
             this.wavekeytxt.TabIndex = 4;
             // 
             // rfLabel3
@@ -100,7 +100,7 @@
             this.orderkeytxt.Location = new System.Drawing.Point(3, 128);
             this.orderkeytxt.Name = "orderkeytxt";
             this.orderkeytxt.ReadOnly = true;
-            this.orderkeytxt.Size = new System.Drawing.Size(215, 23);
+            this.orderkeytxt.Size = new System.Drawing.Size(198, 23);
             this.orderkeytxt.TabIndex = 7;
             // 
             // label33
@@ -118,7 +118,7 @@
             this.isfullpickedtxt.Location = new System.Drawing.Point(3, 168);
             this.isfullpickedtxt.Name = "isfullpickedtxt";
             this.isfullpickedtxt.ReadOnly = true;
-            this.isfullpickedtxt.Size = new System.Drawing.Size(215, 23);
+            this.isfullpickedtxt.Size = new System.Drawing.Size(198, 23);
             this.isfullpickedtxt.TabIndex = 10;
             // 
             // rfLabel4
@@ -135,7 +135,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.Location = new System.Drawing.Point(3, 255);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(215, 66);
+            this.listBox1.Size = new System.Drawing.Size(198, 66);
             this.listBox1.TabIndex = 15;
             // 
             // label1
@@ -153,7 +153,7 @@
             this.dataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.dataGrid1.Location = new System.Drawing.Point(3, 338);
             this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(214, 68);
+            this.dataGrid1.Size = new System.Drawing.Size(198, 66);
             this.dataGrid1.TabIndex = 23;
             // 
             // label2
@@ -162,7 +162,7 @@
             this.label2.Location = new System.Drawing.Point(4, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 14);
-            this.label2.Text = "装箱时间";
+            this.label2.Text = "提供箱单日期";
             // 
             // susr15
             // 
@@ -170,14 +170,14 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.susr15.Location = new System.Drawing.Point(4, 213);
             this.susr15.Name = "susr15";
-            this.susr15.Size = new System.Drawing.Size(214, 23);
+            this.susr15.Size = new System.Drawing.Size(197, 23);
             this.susr15.TabIndex = 31;
             // 
             // NSPRFQUERYBYDROPIDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(238, 360);
+            this.ClientSize = new System.Drawing.Size(238, 415);
             this.Controls.Add(this.susr15);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGrid1);

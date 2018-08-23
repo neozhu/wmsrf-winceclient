@@ -70,7 +70,8 @@ namespace RFDeviceAPP
                         this.susr15.Text = result1.ShipmentOrderHeader.SUSR15;
                     }
                 }
-
+                setlist(result.UtilityHeader.ALLDROPID);
+                setlist1(result.UtilityHeader.ALLLOCANDID);
 
                 if (result.UtilityHeader.ISFULLPICKED == "0" && result.UtilityHeader.OrderKey.Length > 0)
                 {

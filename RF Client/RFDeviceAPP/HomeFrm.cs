@@ -36,6 +36,16 @@ namespace RFDeviceAPP
         private FrmPODLabel frmpodlabel = null;
         private FrmPODLoad frmpodload = null;
         private NSPRFQUERYBYDROPIDForm nsprfquerybydropidfrm = null;
+        private FrmScanSN1 frmscansn1 = null;
+
+        //2017/01/16  pop_wu  add workinstructions screen
+        private FrmInstrcutions frminstrcution = null;
+        //
+
+        //2018/05/15  pop_wu  add RTRSKU screen
+        private FrmRTRSku1 frmrtrsku = null;
+        //
+
         private string[] screen;
         public HomeFrm(Common.UserInfo loginuser,string[] screen)
         {
@@ -360,8 +370,11 @@ namespace RFDeviceAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TestForm11 ddd = new TestForm11();
-            ddd.Show();
+            FrmExpressPrint expressfrm = new FrmExpressPrint(this._user);
+            expressfrm.Show();
+            expressfrm.Activate();
+            //TestForm11 ddd = new TestForm11();
+            //ddd.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -489,6 +502,34 @@ namespace RFDeviceAPP
             flpickingfrm = new RFFLPickingFrm(this._user,true);
             flpickingfrm.Show();
             flpickingfrm.Activate();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frminstrcution = new FrmInstrcutions(this._user);
+            frminstrcution.Show();
+            frminstrcution.Activate();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            frmrtrsku = new FrmRTRSku1(this._user);
+            frmrtrsku.Show();
+            frmrtrsku.Activate();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            frmscansn1 = new FrmScanSN1(this._user);
+            frmscansn1.Show();
+            frmscansn1.Activate();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FrmExpressPrint frmexpress = new FrmExpressPrint(this._user);
+            frmexpress.Show();
+            frmexpress.Activate();
         }
 
         

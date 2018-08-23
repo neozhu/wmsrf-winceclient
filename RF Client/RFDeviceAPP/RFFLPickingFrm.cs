@@ -116,6 +116,9 @@ namespace RFDeviceAPP
                         this.pick_req2 = new pick2_req.Utility();
                         this.pick_req2.UtilityHeader.userid = this.loginuser.UserName;
                         this.sotxt.SetText("");
+                        //aup
+                        this.remqtytxt.SetText("");
+                        //aup
                         InvokeHelper.Invoke(this, "dataBinding", null);
                         this.sotxt.SetFocus();
                         InvokeHelper.Invoke(this, "RestLabel", 0);
@@ -185,7 +188,10 @@ namespace RFDeviceAPP
                 this.pick_req2.UtilityHeader.lot = this.pick_res1.UtilityHeader.Lot;
                 this.pick_req2.UtilityHeader.fromloc = this.pick_res1.UtilityHeader.FromLoc;
                 this.pick_req2.UtilityHeader.qty = this.pick_res1.UtilityHeader.nothadpicked;
-                this.qtytxt.SetText(this.pick_res1.UtilityHeader.nothadpicked);
+                this.qtytxt.SetText(this.pick_res1.UtilityHeader.nothadpicked);//+ "," + this.pick_res1.UtilityHeader.hadpickqty + "," + this.pick_res1.UtilityHeader.locqty
+                //aup
+                this.remqtytxt.SetText(this.pick_res1.UtilityHeader.idremqty);//this.pick_res1.UtilityHeader.remqty + "," + this.pick_res1.UtilityHeader.idqty + "," + 
+                //aup
                 //InvokeHelper.Invoke(this, "SetLabel", this.pick_res1);
                 this.SetLabel(this.pick_res1);
                 this.qtytxt.SetFocus();
@@ -254,6 +260,9 @@ namespace RFDeviceAPP
                     this.pick_req2 = new pick2_req.Utility();
                     this.pick_req2.UtilityHeader.userid = this.loginuser.UserName;
                     this.sotxt.SetText("");
+                    //aup
+                    this.remqtytxt.SetText("");
+                    //aup
                     InvokeHelper.Invoke(this, "dataBinding", null);
                     this.sotxt.SetFocus();
                     InvokeHelper.Invoke(this, "RestLabel", 0);
@@ -300,7 +309,15 @@ namespace RFDeviceAPP
                 errortxt += "区域拣货中必须十位的ID号码";
                  
             }
+            //aup
+            if (!this.remqtytxt.Text.Equals(this.pick_res1.UtilityHeader.idremqty))
+            {
+                if (string.IsNullOrEmpty(errortxt))
+                    focusControl = this.skutxt;
+                errortxt += "剩余数量填写错误";
 
+            }
+            //aup
             return errortxt;
         }
         private void skutxt_LostFocus(object sender, EventArgs e)

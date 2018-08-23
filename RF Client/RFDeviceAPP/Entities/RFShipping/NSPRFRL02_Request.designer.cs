@@ -88,6 +88,8 @@ namespace RFDeviceAPP.Common.NSPRFRL02.Request
 
         private string refnumField;
 
+        private string lasttoidField;
+
         public UtilityHeader()
         {
             this.procNameField = "NSPRFRL02";
@@ -113,6 +115,7 @@ namespace RFDeviceAPP.Common.NSPRFRL02.Request
             this.uomField = "";
             this.packkeyField = "";
             this.refnumField = "";
+            this.lasttoidField = "";
         }
 
         public string ProcName
@@ -390,5 +393,19 @@ namespace RFDeviceAPP.Common.NSPRFRL02.Request
                 this.refnumField = value;
             }
         }
+
+
+        public string lasttoid
+        {
+            get 
+            { 
+                return lasttoidField; 
+            }
+            set 
+            { 
+                lasttoidField = value; 
+            }
+        }
+
     }
 }

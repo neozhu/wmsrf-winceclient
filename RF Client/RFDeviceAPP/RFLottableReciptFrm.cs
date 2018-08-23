@@ -23,6 +23,7 @@ using asnlist_res=RFDeviceAPP.Common.asnlist01.Response;
 using RFDeviceAPP.Proxy;
 using System.Text.RegularExpressions;
 using System.Reflection;
+using RFDeviceAPP.Common.ASN;
 
 namespace RFDeviceAPP
 {
@@ -37,6 +38,7 @@ namespace RFDeviceAPP
         private flrs2_res.Utility asnskures;
         private asnlist_req.AdvancedShipNotice asnlistreq;
         private asnlist_res.AdvancedShipNotice asnlistres;
+        private AdvancedShipNotice asnData;
         private ThreadHelper threadhelper;
         private string dropid = string.Empty;
         private Control focusControl;
@@ -55,6 +57,15 @@ namespace RFDeviceAPP
             this.dataBinding();
             this.receiptkeytxt.Focus();
             this.KeyPreview = true;
+
+            string whid = this.loginuser.Whcode;
+            if (whid == "FEILI_wmwhse21")
+            {
+                this.label6.Visible = false;
+                this.packkeytxt.Visible = false;
+                this.packkeytxt.Text = "STD";
+            }
+
         }
         public void dataBinding()
         {
@@ -281,6 +292,12 @@ namespace RFDeviceAPP
                             string text =string.Empty;
                             if(valfieldidx==10)
                                 text = header.GetPropValue(string.Format("Lottable{0}", valfieldidx)).ToString();
+                            //20170206  popwu
+                            else if (valfieldidx == 4 || valfieldidx == 5 || valfieldidx == 46 || valfieldidx == 47)
+                            {
+                                if (header.GetPropValue(string.Format("lottable{0}", valfieldidx)) == null)
+                                    text = "";
+                            }
                             else
                                 text = header.GetPropValue(string.Format("lottable{0}", valfieldidx)).ToString();
                             string filedmember = string.Format("UtilityHeader.lottable{0}", valfieldidx.ToString("00"));
@@ -599,7 +616,9 @@ namespace RFDeviceAPP
             receivelinereq.UtilityHeader.userid = this.loginuser.UserName;
             receivelinereq.UtilityHeader.drid = receivelinereq.UtilityHeader.drid.ToUpper();
             receivelinereq.UtilityHeader.prokey = receivelinereq.UtilityHeader.receiptkey;
-            receivelinereq.UtilityHeader.receiptkey = "";
+            //20170123  pop_wu
+            //receivelinereq.UtilityHeader.receiptkey = "";
+            //
             if( !string.IsNullOrEmpty(receivelinereq.UtilityHeader.drid)){
                 this.dropid = receivelinereq.UtilityHeader.drid;
             }
@@ -655,7 +674,19 @@ namespace RFDeviceAPP
                 this.idtxt.Clean();
                 this.packkeytxt.Clean();
                 this.dataBinding();
-                
+
+                //RequestMessage searchrequest = new RequestMessage(enumRequestType.MessageProcessor,
+                //enumMessageType.AdvancedShipNotice,
+                //enumRequestMethod.list, this.loginuser,
+                //enumSendSysId.EXceed,
+                //AdvancedShipNotice.CreateSearchByKey(receiptkey));
+                //Response = ThreadHelper.Execute(searchrequest);
+                //this.asnData = Response.Deserialize<AdvancedShipNotice>();
+                //string _status = this.asnData.AdvancedShipNoticeHeader.Status;
+                //if (_status.Equals("9"))
+                //{
+                //    MessageBox.Show("收货完成");
+                //}
 
                 //MessageBox.Show("收货完成");
                 this.receiptkeytxt.SetFocus();
@@ -697,6 +728,12 @@ namespace RFDeviceAPP
                 errortxt += "sku必填";
                 
             }
+            string whid = this.loginuser.Whcode;
+            if (whid == "FEILI_wmwhse21")
+            {
+                this.packkeytxt.Text = "STD";
+            }
+            MessageBox.Show(this.packkeytxt.Text + "------" + this.packkeytxt.Text.Length);
             if (this.packkeytxt.Text.Length == 0)
             {
                 if (string.IsNullOrEmpty(errortxt))

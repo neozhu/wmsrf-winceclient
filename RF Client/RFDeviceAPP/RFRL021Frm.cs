@@ -76,6 +76,7 @@ namespace RFDeviceAPP
                     this.fromloc.SetText(this.RL021res.UtilityHeader.FromLoc);
                     this.desc.SetText(this.RL021res.UtilityHeader.Descr);
                     this.toloc1.SetText(this.RL021res.UtilityHeader.ToLoc);
+                    this.lasttoid.SetText(this.RL021res.UtilityHeader.lasttoid);
                     //DialogResult result = MessageBox.Show("拣货完成，是否获取新任务？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
                     //InvokeHelper.Invoke(this, "CloseWindow", result);
                 }
@@ -184,6 +185,7 @@ namespace RFDeviceAPP
                     {
                         //this.toloc1.SetText(this.RL021res.UtilityHeader.FromLoc);
                         this.toloc1.SetText(this.RL021res.UtilityHeader.ToLoc);
+                        this.lasttoid.SetText(this.RL021res.UtilityHeader.lasttoid);
                         movableunitlist(this.movableunit.Text);
                         this.movableunit.Focus();
                     }

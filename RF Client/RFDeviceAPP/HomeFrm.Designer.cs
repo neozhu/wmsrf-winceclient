@@ -36,7 +36,6 @@
             this.f08btn = new System.Windows.Forms.Button();
             this.f10btn = new System.Windows.Forms.Button();
             this.f07btn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.f15btn = new System.Windows.Forms.Button();
             this.f09btn = new System.Windows.Forms.Button();
             this.f12btn = new System.Windows.Forms.Button();
@@ -54,8 +53,12 @@
             this.f23btn = new System.Windows.Forms.Button();
             this.f24btn = new System.Windows.Forms.Button();
             this.f25btn = new System.Windows.Forms.Button();
-            this.userStatusControl = new RFDeviceAPP.UserStatusControl();
             this.f09_1btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.userStatusControl = new RFDeviceAPP.UserStatusControl();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // f01btn
@@ -137,18 +140,6 @@
             this.f07btn.TabIndex = 9;
             this.f07btn.Text = "纸面拣货";
             this.f07btn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(130, 464);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "测试";
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // f15btn
             // 
@@ -320,6 +311,42 @@
             this.f25btn.Text = "一次集货(查询)";
             this.f25btn.Click += new System.EventHandler(this.f25btn_Click);
             // 
+            // f09_1btn
+            // 
+            this.f09_1btn.Location = new System.Drawing.Point(3, 212);
+            this.f09_1btn.Name = "f09_1btn";
+            this.f09_1btn.Size = new System.Drawing.Size(105, 30);
+            this.f09_1btn.TabIndex = 28;
+            this.f09_1btn.Text = "区域拣货";
+            this.f09_1btn.Click += new System.EventHandler(this.f09_1btn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(130, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 30);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "服务指令";
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(4, 536);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 30);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "分料";
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(130, 536);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(105, 29);
+            this.button4.TabIndex = 31;
+            this.button4.Text = "精品扫描";
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // userStatusControl
             // 
             this.userStatusControl.Dock = System.Windows.Forms.DockStyle.Top;
@@ -330,21 +357,25 @@
             this.userStatusControl.Size = new System.Drawing.Size(238, 26);
             this.userStatusControl.TabIndex = 0;
             // 
-            // f09_1btn
+            // button2
             // 
-            this.f09_1btn.Location = new System.Drawing.Point(3, 212);
-            this.f09_1btn.Name = "f09_1btn";
-            this.f09_1btn.Size = new System.Drawing.Size(105, 30);
-            this.f09_1btn.TabIndex = 28;
-            this.f09_1btn.Text = "区域拣货";
-            this.f09_1btn.Click += new System.EventHandler(this.f09_1btn_Click);
+            this.button2.Location = new System.Drawing.Point(130, 463);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 30);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "快递面单";
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // HomeFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(238, 567);
+            this.ClientSize = new System.Drawing.Size(238, 596);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.f09_1btn);
             this.Controls.Add(this.f25btn);
             this.Controls.Add(this.f24btn);
@@ -363,7 +394,6 @@
             this.Controls.Add(this.f12btn);
             this.Controls.Add(this.f09btn);
             this.Controls.Add(this.f15btn);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.f07btn);
             this.Controls.Add(this.f10btn);
             this.Controls.Add(this.f08btn);
@@ -391,7 +421,6 @@
         private System.Windows.Forms.Button f08btn;
         private System.Windows.Forms.Button f10btn;
         private System.Windows.Forms.Button f07btn;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button f15btn;
         private System.Windows.Forms.Button f09btn;
         private System.Windows.Forms.Button f12btn;
@@ -410,5 +439,9 @@
         private System.Windows.Forms.Button f24btn;
         private System.Windows.Forms.Button f25btn;
         private System.Windows.Forms.Button f09_1btn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
     }
 }

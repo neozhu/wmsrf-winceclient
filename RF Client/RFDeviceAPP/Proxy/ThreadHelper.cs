@@ -160,6 +160,7 @@ namespace RFDeviceAPP.Proxy
             doc.LoadXml(xmlstring);
             return doc;
         }
+
         private string serialize()
         {
             XmlSerializerNamespaces xmlnsEmpty = new XmlSerializerNamespaces();

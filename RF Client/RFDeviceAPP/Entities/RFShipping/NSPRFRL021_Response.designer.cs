@@ -79,6 +79,10 @@ namespace RFDeviceAPP.Common.NSPRFRL021.Response
 
         private string dateFormateField;
 
+        private string lasttoidField;
+
+        private string allLocField;
+
         public string CaseID
         {
             get
@@ -184,6 +188,18 @@ namespace RFDeviceAPP.Common.NSPRFRL021.Response
             set
             {
                 this.toLocField = value;
+            }
+        }
+
+        public string allLoc
+        {
+            get
+            {
+                return this.allLocField;
+            }
+            set
+            {
+                this.allLocField = value;
             }
         }
 
@@ -304,6 +320,19 @@ namespace RFDeviceAPP.Common.NSPRFRL021.Response
             set
             {
                 this.dateFormateField = value;
+            }
+        }
+
+
+        public string lasttoid
+        {
+            get
+            {
+                return lasttoidField;
+            }
+            set
+            {
+                lasttoidField = value;
             }
         }
     }

@@ -42,12 +42,14 @@
             this.totagtxt = new RFDeviceAPP.Common.rfTextBox();
             this.totag = new RFDeviceAPP.Common.rfLabel();
             this.totagtxtlist = new System.Windows.Forms.ListBox();
+            this.lasttoid = new RFDeviceAPP.Common.rfTextBox();
+            this.rfLabel4 = new RFDeviceAPP.Common.rfLabel();
             this.SuspendLayout();
             // 
             // userStatusControl1
             // 
             this.userStatusControl1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular);
-            this.userStatusControl1.Size = new System.Drawing.Size(238, 26);
+            this.userStatusControl1.Size = new System.Drawing.Size(256, 26);
             // 
             // rfLabel1
             // 
@@ -63,7 +65,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.movableunit.Location = new System.Drawing.Point(4, 45);
             this.movableunit.Name = "movableunit";
-            this.movableunit.Size = new System.Drawing.Size(231, 23);
+            this.movableunit.Size = new System.Drawing.Size(246, 23);
             this.movableunit.TabIndex = 2;
             this.movableunit.GotFocus += new System.EventHandler(this.movableunit_GotFocus);
             this.movableunit.LostFocus += new System.EventHandler(this.movableunit_LostFocus);
@@ -72,25 +74,25 @@
             // 
             this.fromloc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.fromloc.Location = new System.Drawing.Point(3, 297);
+            this.fromloc.Location = new System.Drawing.Point(3, 323);
             this.fromloc.Name = "fromloc";
             this.fromloc.ReadOnly = true;
-            this.fromloc.Size = new System.Drawing.Size(231, 23);
+            this.fromloc.Size = new System.Drawing.Size(246, 23);
             this.fromloc.TabIndex = 3;
             this.fromloc.Visible = false;
             // 
             // rfLabel2
             // 
             this.rfLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.rfLabel2.Location = new System.Drawing.Point(3, 283);
+            this.rfLabel2.Location = new System.Drawing.Point(3, 309);
             this.rfLabel2.Name = "rfLabel2";
-            this.rfLabel2.Size = new System.Drawing.Size(72, 14);
+            this.rfLabel2.Size = new System.Drawing.Size(72, 30);
             this.rfLabel2.Text = "自库位";
             this.rfLabel2.Visible = false;
             // 
             // toloc
             // 
-            this.toloc.Location = new System.Drawing.Point(4, 125);
+            this.toloc.Location = new System.Drawing.Point(4, 122);
             this.toloc.Name = "toloc";
             this.toloc.Size = new System.Drawing.Size(100, 23);
             this.toloc.TabIndex = 4;
@@ -98,7 +100,7 @@
             // rfLabel3
             // 
             this.rfLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.rfLabel3.Location = new System.Drawing.Point(4, 111);
+            this.rfLabel3.Location = new System.Drawing.Point(4, 108);
             this.rfLabel3.Name = "rfLabel3";
             this.rfLabel3.Size = new System.Drawing.Size(89, 14);
             this.rfLabel3.Text = "至集货区库位";
@@ -107,19 +109,19 @@
             // 
             this.sku.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.sku.Location = new System.Drawing.Point(4, 233);
+            this.sku.Location = new System.Drawing.Point(4, 259);
             this.sku.Name = "sku";
             this.sku.ReadOnly = true;
-            this.sku.Size = new System.Drawing.Size(231, 23);
+            this.sku.Size = new System.Drawing.Size(246, 23);
             this.sku.TabIndex = 10;
             this.sku.Visible = false;
             // 
             // s1ku111
             // 
             this.s1ku111.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.s1ku111.Location = new System.Drawing.Point(4, 218);
+            this.s1ku111.Location = new System.Drawing.Point(4, 244);
             this.s1ku111.Name = "s1ku111";
-            this.s1ku111.Size = new System.Drawing.Size(200, 14);
+            this.s1ku111.Size = new System.Drawing.Size(200, 30);
             this.s1ku111.Text = "SKU数/已包装箱数/总箱数";
             this.s1ku111.Visible = false;
             // 
@@ -127,10 +129,10 @@
             // 
             this.desc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.desc.Location = new System.Drawing.Point(4, 258);
+            this.desc.Location = new System.Drawing.Point(4, 284);
             this.desc.Name = "desc";
             this.desc.ReadOnly = true;
-            this.desc.Size = new System.Drawing.Size(231, 23);
+            this.desc.Size = new System.Drawing.Size(246, 23);
             this.desc.TabIndex = 12;
             this.desc.Visible = false;
             // 
@@ -139,9 +141,9 @@
             this.submitbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.submitbtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.submitbtn.Location = new System.Drawing.Point(158, 153);
+            this.submitbtn.Location = new System.Drawing.Point(158, 190);
             this.submitbtn.Name = "submitbtn";
-            this.submitbtn.Size = new System.Drawing.Size(77, 50);
+            this.submitbtn.Size = new System.Drawing.Size(92, 50);
             this.submitbtn.TabIndex = 5;
             this.submitbtn.Text = "集货";
             this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click);
@@ -150,10 +152,10 @@
             // 
             this.toloc1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.toloc1.Location = new System.Drawing.Point(110, 125);
+            this.toloc1.Location = new System.Drawing.Point(110, 122);
             this.toloc1.Name = "toloc1";
             this.toloc1.ReadOnly = true;
-            this.toloc1.Size = new System.Drawing.Size(125, 23);
+            this.toloc1.Size = new System.Drawing.Size(140, 23);
             this.toloc1.TabIndex = 17;
             // 
             // totagtxt
@@ -162,7 +164,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.totagtxt.Location = new System.Drawing.Point(4, 83);
             this.totagtxt.Name = "totagtxt";
-            this.totagtxt.Size = new System.Drawing.Size(231, 23);
+            this.totagtxt.Size = new System.Drawing.Size(246, 23);
             this.totagtxt.TabIndex = 3;
             this.totagtxt.LostFocus += new System.EventHandler(this.totagtxt_LostFocus);
             // 
@@ -178,17 +180,35 @@
             // 
             this.totagtxtlist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.totagtxtlist.Location = new System.Drawing.Point(5, 153);
+            this.totagtxtlist.Location = new System.Drawing.Point(5, 190);
             this.totagtxtlist.Name = "totagtxtlist";
-            this.totagtxtlist.Size = new System.Drawing.Size(147, 50);
+            this.totagtxtlist.Size = new System.Drawing.Size(162, 50);
             this.totagtxtlist.TabIndex = 22;
             this.totagtxtlist.SelectedIndexChanged += new System.EventHandler(this.totagtxtlist_OnDoubleClick);
+            // 
+            // lasttoid
+            // 
+            this.lasttoid.Location = new System.Drawing.Point(6, 162);
+            this.lasttoid.Name = "lasttoid";
+            this.lasttoid.ReadOnly = true;
+            this.lasttoid.Size = new System.Drawing.Size(243, 23);
+            this.lasttoid.TabIndex = 29;
+            // 
+            // rfLabel4
+            // 
+            this.rfLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
+            this.rfLabel4.Location = new System.Drawing.Point(6, 147);
+            this.rfLabel4.Name = "rfLabel4";
+            this.rfLabel4.Size = new System.Drawing.Size(45, 14);
+            this.rfLabel4.Text = "落放ID";
             // 
             // RFRL021Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(238, 322);
+            this.ClientSize = new System.Drawing.Size(256, 357);
+            this.Controls.Add(this.rfLabel4);
+            this.Controls.Add(this.lasttoid);
             this.Controls.Add(this.totagtxtlist);
             this.Controls.Add(this.totagtxt);
             this.Controls.Add(this.totag);
@@ -221,6 +241,8 @@
             this.Controls.SetChildIndex(this.totag, 0);
             this.Controls.SetChildIndex(this.totagtxt, 0);
             this.Controls.SetChildIndex(this.totagtxtlist, 0);
+            this.Controls.SetChildIndex(this.lasttoid, 0);
+            this.Controls.SetChildIndex(this.rfLabel4, 0);
             this.ResumeLayout(false);
 
         }
@@ -241,5 +263,7 @@
         private RFDeviceAPP.Common.rfTextBox totagtxt;
         private RFDeviceAPP.Common.rfLabel totag;
         private System.Windows.Forms.ListBox totagtxtlist;
+        private RFDeviceAPP.Common.rfTextBox lasttoid;
+        private RFDeviceAPP.Common.rfLabel rfLabel4;
     }
 }

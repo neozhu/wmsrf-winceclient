@@ -45,6 +45,8 @@
             this.lb3 = new System.Windows.Forms.Label();
             this.lb4 = new System.Windows.Forms.Label();
             this.submitbt = new RFDeviceAPP.Common.rfButtonCommand();
+            this.rfLabel7 = new RFDeviceAPP.Common.rfLabel();
+            this.remqtytxt = new RFDeviceAPP.Common.rfTextBox();
             this.SuspendLayout();
             // 
             // userStatusControl1
@@ -161,7 +163,7 @@
             this.lb1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lb1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.lb1.Location = new System.Drawing.Point(4, 265);
+            this.lb1.Location = new System.Drawing.Point(7, 307);
             this.lb1.Name = "lb1";
             this.lb1.Size = new System.Drawing.Size(231, 20);
             this.lb1.Text = "ID现有库存{0.0}";
@@ -171,7 +173,7 @@
             this.lb2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lb2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.lb2.Location = new System.Drawing.Point(4, 285);
+            this.lb2.Location = new System.Drawing.Point(7, 327);
             this.lb2.Name = "lb2";
             this.lb2.Size = new System.Drawing.Size(231, 20);
             this.lb2.Text = "ID拣后库存{0.0}";
@@ -181,7 +183,7 @@
             this.lb3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lb3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.lb3.Location = new System.Drawing.Point(4, 311);
+            this.lb3.Location = new System.Drawing.Point(7, 353);
             this.lb3.Name = "lb3";
             this.lb3.Size = new System.Drawing.Size(231, 20);
             this.lb3.Text = "储位现有库存{0.0}";
@@ -191,7 +193,7 @@
             this.lb4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lb4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.lb4.Location = new System.Drawing.Point(4, 330);
+            this.lb4.Location = new System.Drawing.Point(7, 372);
             this.lb4.Name = "lb4";
             this.lb4.Size = new System.Drawing.Size(231, 20);
             this.lb4.Text = "储位拣后库存{0.0}";
@@ -201,18 +203,39 @@
             this.submitbt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.submitbt.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
-            this.submitbt.Location = new System.Drawing.Point(135, 358);
+            this.submitbt.Location = new System.Drawing.Point(138, 400);
             this.submitbt.Name = "submitbt";
             this.submitbt.Size = new System.Drawing.Size(100, 48);
             this.submitbt.TabIndex = 6;
             this.submitbt.Text = "OK";
             this.submitbt.Click += new System.EventHandler(this.submitbt_Click);
             // 
+            // rfLabel7
+            // 
+            this.rfLabel7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular);
+            this.rfLabel7.Location = new System.Drawing.Point(4, 261);
+            this.rfLabel7.Name = "rfLabel7";
+            this.rfLabel7.Size = new System.Drawing.Size(120, 17);
+            this.rfLabel7.Text = "剩余数量";
+            // 
+            // remqtytxt
+            // 
+            this.remqtytxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.remqtytxt.Enabled = false;
+            this.remqtytxt.Location = new System.Drawing.Point(4, 281);
+            this.remqtytxt.Name = "remqtytxt";
+            this.remqtytxt.ReadOnly = true;
+            this.remqtytxt.Size = new System.Drawing.Size(231, 23);
+            this.remqtytxt.TabIndex = 19;
+            // 
             // RFFLPickingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(238, 409);
+            this.ClientSize = new System.Drawing.Size(238, 453);
+            this.Controls.Add(this.remqtytxt);
+            this.Controls.Add(this.rfLabel7);
             this.Controls.Add(this.submitbt);
             this.Controls.Add(this.lb4);
             this.Controls.Add(this.lb3);
@@ -250,6 +273,8 @@
             this.Controls.SetChildIndex(this.lb3, 0);
             this.Controls.SetChildIndex(this.lb4, 0);
             this.Controls.SetChildIndex(this.submitbt, 0);
+            this.Controls.SetChildIndex(this.rfLabel7, 0);
+            this.Controls.SetChildIndex(this.remqtytxt, 0);
             this.ResumeLayout(false);
 
         }
@@ -273,5 +298,7 @@
         private System.Windows.Forms.Label lb3;
         private System.Windows.Forms.Label lb4;
         private RFDeviceAPP.Common.rfButtonCommand submitbt;
+        private RFDeviceAPP.Common.rfLabel rfLabel7;
+        private RFDeviceAPP.Common.rfTextBox remqtytxt;
     }
 }
